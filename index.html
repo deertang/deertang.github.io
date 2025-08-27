@@ -12,6 +12,25 @@
     <link rel="icon" type="image/svg+xml" href="/1024.png" />
     <script type="module" crossorigin src="/assets/index-CTLbTlNw.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DTVDLIcV.css">
+    <style>
+      /* Basic mobile overrides: keep desktop unchanged */
+      @media (max-width: 768px) {
+        /* Fluid type scaling on mobile while preserving hierarchy */
+        html { font-size: clamp(15px, 3.8vw, 17px); }
+
+        /* Comfort padding for global containers */
+        .container { padding-left: 1rem; padding-right: 1rem; }
+
+        /* Tune larger text utilities down a notch for mobile */
+        .text-4xl { font-size: 1.75rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-2xl { font-size: 1.25rem; line-height: 1.75rem; }
+
+        /* Common grid image rows: reduce columns on small screens */
+        .grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+    </style>
   </head>
 
   <body>
