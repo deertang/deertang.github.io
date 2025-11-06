@@ -44,6 +44,59 @@
 
   <body>
     <div id="root"></div>
+    
+    <script>
+      // Remove "tinytype" text from the page
+      function removeTinytypeText() {
+        // Use MutationObserver to handle dynamic content
+        const observer = new MutationObserver(() => {
+          processTextNodes();
+        });
+        
+        function processTextNodes() {
+          // Find all text nodes in the document
+          const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+          );
+          
+          let node;
+          const textNodesToUpdate = [];
+          
+          while (node = walker.nextNode()) {
+            if (node.textContent.includes('tinytype')) {
+              textNodesToUpdate.push(node);
+            }
+          }
+          
+          // Update the text nodes
+          textNodesToUpdate.forEach(node => {
+            node.textContent = node.textContent.replace(/tinytype\s*/gi, '');
+          });
+        }
+        
+        // Initial processing
+        setTimeout(processTextNodes, 100);
+        setTimeout(processTextNodes, 500);
+        setTimeout(processTextNodes, 1000);
+        
+        // Observe future changes
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+          characterData: true
+        });
+      }
+      
+      // Run after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', removeTinytypeText);
+      } else {
+        removeTinytypeText();
+      }
+    </script>
 
   </body>
 </html>
