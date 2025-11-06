@@ -90,11 +90,105 @@
         });
       }
       
+      // Update button texts and add Android download functionality
+      function updateButtons() {
+        const processedElements = new WeakSet();
+        
+        function processButtons() {
+          // Find all buttons and links
+          const allElements = document.querySelectorAll('button, a, [role="button"]');
+          
+          allElements.forEach(element => {
+            const text = element.textContent.trim();
+            
+            // Update "立即下载" or "iOS下载" to "AppStore下载"
+            if ((text.includes('立即下载') || text.includes('iOS下载') || text.includes('AppStore')) && !text.includes('Android')) {
+              element.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  if (node.textContent.includes('立即下载')) {
+                    node.textContent = node.textContent.replace('立即下载', 'AppStore下载');
+                  } else if (node.textContent.includes('iOS下载')) {
+                    node.textContent = node.textContent.replace('iOS下载', 'AppStore下载');
+                  } else if (node.textContent.includes('AppStore') && !node.textContent.includes('AppStore下载')) {
+                    node.textContent = node.textContent.replace('AppStore', 'AppStore下载');
+                  }
+                }
+              });
+            }
+            
+            // Update "了解更多" to "Android下载" and add icon + download functionality
+            if (text.includes('了解更多') && !processedElements.has(element)) {
+              // Mark as processed
+              processedElements.add(element);
+              
+              // Find and replace text node
+              element.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('了解更多')) {
+                  node.textContent = node.textContent.replace('了解更多', 'Android下载');
+                }
+              });
+              
+              // Add Android icon before the text
+              const iconElements = element.querySelectorAll('svg, img');
+              if (iconElements.length === 0) {
+                // Create Android icon
+                const androidIcon = document.createElement('img');
+                androidIcon.src = '/assets/android.png';
+                androidIcon.alt = 'Android';
+                androidIcon.style.width = '22px';
+                androidIcon.style.height = '22px';
+                androidIcon.style.display = 'inline-block';
+                androidIcon.style.marginRight = '8px';
+                androidIcon.style.verticalAlign = 'middle';
+                
+                // Insert icon at the beginning
+                element.insertBefore(androidIcon, element.firstChild);
+              }
+              
+              // Add click handler for Android download
+              element.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Create a temporary link to download the APK
+                const link = document.createElement('a');
+                link.href = '/assets/com.tiny.type.apk';
+                link.download = 'tinytype.apk';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }, true);
+            }
+          });
+        }
+        
+        // Initial processing with multiple attempts
+        setTimeout(processButtons, 100);
+        setTimeout(processButtons, 500);
+        setTimeout(processButtons, 1000);
+        setTimeout(processButtons, 2000);
+        
+        // Observe for future changes
+        const observer = new MutationObserver(() => {
+          processButtons();
+        });
+        
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+          characterData: true
+        });
+      }
+      
       // Run after DOM is ready
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', removeTinytypeText);
+        document.addEventListener('DOMContentLoaded', function() {
+          removeTinytypeText();
+          updateButtons();
+        });
       } else {
         removeTinytypeText();
+        updateButtons();
       }
     </script>
 
