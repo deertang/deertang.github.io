@@ -25,7 +25,7 @@
           --primary-hover: #1d4ed8;
           --text-primary: #1f2937;
           --text-secondary: #6b7280;
-          --bg-primary: #fffff6;
+          --bg-primary: #ffffff;
           --bg-secondary: #f9fafb;
           --border-color: #e5e7eb;
           
@@ -245,9 +245,95 @@
             background-color: rgba(59, 130, 246, 0.1);
           }
         }
+
+        /* 顶部导航 */
+        .top-nav {
+          padding: var(--spacing-md) 0;
+          border-bottom: 1px solid var(--border-color);
+          background-color: var(--bg-primary);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .top-nav .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: var(--spacing-md);
+        }
+        .nav-links {
+          display: flex;
+          gap: var(--spacing-lg);
+          align-items: center;
+        }
+        .nav-links a {
+          color: var(--text-secondary);
+          font-size: var(--font-sm);
+          transition: color 0.2s ease;
+          white-space: nowrap;
+        }
+        .nav-links a:hover {
+          color: var(--primary-color);
+        }
+
+        /* 目录 */
+        .toc {
+          background-color: var(--bg-secondary);
+          border-radius: var(--radius-lg);
+          padding: var(--spacing-lg);
+          margin: var(--spacing-xl) 0;
+        }
+        .toc h3 {
+          font-size: var(--font-lg);
+          margin-bottom: var(--spacing-md);
+          color: var(--text-primary);
+        }
+        .toc ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .toc ul li {
+          margin-bottom: var(--spacing-sm);
+        }
+        .toc ul li a {
+          color: var(--text-secondary);
+          font-size: var(--font-base);
+          display: block;
+          padding: var(--spacing-xs) 0;
+          transition: all 0.2s ease;
+        }
+        .toc ul li a:hover {
+          color: var(--primary-color);
+          padding-left: var(--spacing-xs);
+        }
+
+        @media (max-width: 768px) {
+          .top-nav {
+            padding: var(--spacing-sm) 0;
+          }
+          .nav-links {
+            gap: var(--spacing-sm);
+            font-size: var(--font-xs);
+          }
+          .toc {
+            padding: var(--spacing-md);
+          }
+        }
     </style>
 </head>
 <body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-links">
+          <a href="/">← 返回首页</a>
+          <a href="mailto:hi@tinytypezoo.com">联系我们</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="policy-page">
       <div class="container">
         <article class="policy-content">
@@ -256,8 +342,25 @@
           <div class="policy-meta">
             <p>更新日期：2025年11月7日</p>
           </div>
+
+          <!-- 目录 -->
+          <nav class="toc">
+            <h3>目录</h3>
+            <ul>
+              <li><a href="#intro">引言</a></li>
+              <li><a href="#section1">一、我们如何收集和使用您的个人信息</a></li>
+              <li><a href="#section2">二、我们如何共享、转让、公开披露您的个人信息</a></li>
+              <li><a href="#section3">三、我们如何存储和保护您的个人信息</a></li>
+              <li><a href="#section4">四、您如何管理您的个人信息</a></li>
+              <li><a href="#section5">五、您如何注销您的账号</a></li>
+              <li><a href="#section6">六、未成年人保护</a></li>
+              <li><a href="#section7">七、我们如何更新隐私政策</a></li>
+              <li><a href="#section8">八、如何联系我们</a></li>
+              <li><a href="#section9">九、其他</a></li>
+            </ul>
+          </nav>
           
-          <section class="policy-section">
+          <section class="policy-section" id="intro">
             <h2>引言</h2>
             <p>
               名称为"排版小动物"、"tinytype"的网站、小程序、客户端应用程序以及我们不时提供的其他形式（统称"排版小动物"）
@@ -279,7 +382,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section1">
             <h2>一、我们如何收集和使用您的个人信息</h2>
             <p>
               我们将在本政策中依次向您说明我们的产品与/或服务每项功能可能收集的个人信息范围、收集目的、收集方式，
@@ -438,7 +541,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section2">
             <h2>二、我们如何共享、转让、公开披露您的个人信息</h2>
             
             <h3>共享</h3>
@@ -489,7 +592,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section3">
             <h2>三、我们如何存储和保护您的个人信息</h2>
             
             <h3>存储</h3>
@@ -535,7 +638,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section4">
             <h2>四、您如何管理您的个人信息</h2>
             <p>
               我们非常重视并尽力保障您对自己个人信息的相关权利。如您需要访问、修改或依法要求删除我们收集的您的个人信息，
@@ -544,12 +647,12 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section5">
             <h2>五、您如何注销您的账号</h2>
             <p>本产品未提供账号注册、登录功能，因此并未收集您的账号信息。</p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section6">
             <h2>六、未成年人保护</h2>
             <p>
               如果您是未成年人，请通知您的监护人共同阅读本政策，并在您使用我们的产品及服务、提交个人信息之前，
@@ -559,7 +662,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section7">
             <h2>七、我们如何更新隐私政策</h2>
             <ol>
               <li>
@@ -572,7 +675,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section8">
             <h2>八、如何联系我们</h2>
             <p>
               如您对个人信息保护问题有任何投诉、建议、疑问，或您对本政策有任何疑问，
@@ -581,7 +684,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section9">
             <h2>九、其他</h2>
             <ol>
               <li>因本政策以及我们处理您个人信息事宜引起的任何争议，您可诉至上海市黄浦区人民法院。</li>

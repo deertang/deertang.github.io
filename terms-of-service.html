@@ -25,7 +25,7 @@
           --primary-hover: #1d4ed8;
           --text-primary: #1f2937;
           --text-secondary: #6b7280;
-          --bg-primary: #fffff6;
+          --bg-primary: #ffffff;
           --bg-secondary: #f9fafb;
           --border-color: #e5e7eb;
           
@@ -245,9 +245,95 @@
             background-color: rgba(59, 130, 246, 0.1);
           }
         }
+
+        /* 顶部导航 */
+        .top-nav {
+          padding: var(--spacing-md) 0;
+          border-bottom: 1px solid var(--border-color);
+          background-color: var(--bg-primary);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .top-nav .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: var(--spacing-md);
+        }
+        .nav-links {
+          display: flex;
+          gap: var(--spacing-lg);
+          align-items: center;
+        }
+        .nav-links a {
+          color: var(--text-secondary);
+          font-size: var(--font-sm);
+          transition: color 0.2s ease;
+          white-space: nowrap;
+        }
+        .nav-links a:hover {
+          color: var(--primary-color);
+        }
+
+        /* 目录 */
+        .toc {
+          background-color: var(--bg-secondary);
+          border-radius: var(--radius-lg);
+          padding: var(--spacing-lg);
+          margin: var(--spacing-xl) 0;
+        }
+        .toc h3 {
+          font-size: var(--font-lg);
+          margin-bottom: var(--spacing-md);
+          color: var(--text-primary);
+        }
+        .toc ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .toc ul li {
+          margin-bottom: var(--spacing-sm);
+        }
+        .toc ul li a {
+          color: var(--text-secondary);
+          font-size: var(--font-base);
+          display: block;
+          padding: var(--spacing-xs) 0;
+          transition: all 0.2s ease;
+        }
+        .toc ul li a:hover {
+          color: var(--primary-color);
+          padding-left: var(--spacing-xs);
+        }
+
+        @media (max-width: 768px) {
+          .top-nav {
+            padding: var(--spacing-sm) 0;
+          }
+          .nav-links {
+            gap: var(--spacing-sm);
+            font-size: var(--font-xs);
+          }
+          .toc {
+            padding: var(--spacing-md);
+          }
+        }
     </style>
 </head>
 <body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-links">
+          <a href="/">← 返回首页</a>
+          <a href="mailto:hi@tinytypezoo.com">联系我们</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="policy-page">
       <div class="container">
         <article class="policy-content">
@@ -257,8 +343,24 @@
             <p>发布日期：2025 年 9 月 1 日</p>
             <p>生效日期：2025 年 9 月 1 日</p>
           </div>
+
+          <!-- 目录 -->
+          <nav class="toc">
+            <h3>目录</h3>
+            <ul>
+              <li><a href="#notice">特别提示</a></li>
+              <li><a href="#section1">一、定义及协议范围</a></li>
+              <li><a href="#section2">二、排版小动物平台服务内容与说明</a></li>
+              <li><a href="#section3">三、权利与许可</a></li>
+              <li><a href="#section4">四、隐私政策</a></li>
+              <li><a href="#section5">五、法律责任</a></li>
+              <li><a href="#section6">六、服务的变更、中断、终止</a></li>
+              <li><a href="#section7">七、法律适用与管辖</a></li>
+              <li><a href="#section8">八、其他</a></li>
+            </ul>
+          </nav>
           
-          <section class="policy-section">
+          <section class="policy-section" id="notice">
             <h2>特别提示</h2>
             <p>
               欢迎使用开若图科技（上海）有限公司为您提供的 排版小动物 平台。请您务必审慎并完整阅读以下内容，
@@ -280,7 +382,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section1">
             <h2>一、定义及协议范围</h2>
             
             <h3>定义</h3>
@@ -298,7 +400,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section2">
             <h2>二、排版小动物平台服务内容与说明</h2>
             <ol>
               <li>
@@ -327,7 +429,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section3">
             <h2>三、权利与许可</h2>
             
             <h3>平台声明</h3>
@@ -353,7 +455,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section4">
             <h2>四、隐私政策</h2>
             
             <h3>我们收集的信息</h3>
@@ -444,7 +546,7 @@
             </p>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section5">
             <h2>五、法律责任</h2>
             <ol>
               <li>
@@ -458,7 +560,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section6">
             <h2>六、服务的变更、中断、终止</h2>
             <ol>
               <li>
@@ -473,7 +575,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section7">
             <h2>七、法律适用与管辖</h2>
             <ol>
               <li>本协议签订地为中华人民共和国上海市黄浦区。</li>
@@ -488,7 +590,7 @@
             </ol>
           </section>
           
-          <section class="policy-section">
+          <section class="policy-section" id="section8">
             <h2>八、其他</h2>
             <ol>
               <li>
