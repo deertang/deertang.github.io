@@ -246,36 +246,6 @@
           }
         }
 
-        /* 顶部导航 */
-        .top-nav {
-          padding: var(--spacing-md) 0;
-          border-bottom: 1px solid var(--border-color);
-          background-color: var(--bg-primary);
-          position: sticky;
-          top: 0;
-          z-index: 100;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        .top-nav .container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: var(--spacing-md);
-        }
-        .nav-links {
-          display: flex;
-          gap: var(--spacing-lg);
-          align-items: center;
-        }
-        .nav-links a {
-          color: var(--text-secondary);
-          font-size: var(--font-sm);
-          transition: color 0.2s ease;
-          white-space: nowrap;
-        }
-        .nav-links a:hover {
-          color: var(--primary-color);
-        }
 
         /* 目录 */
         .toc {
@@ -310,13 +280,6 @@
         }
 
         @media (max-width: 768px) {
-          .top-nav {
-            padding: var(--spacing-sm) 0;
-          }
-          .nav-links {
-            gap: var(--spacing-sm);
-            font-size: var(--font-xs);
-          }
           .toc {
             padding: var(--spacing-md);
           }
@@ -324,16 +287,6 @@
     </style>
 </head>
 <body>
-    <!-- 顶部导航 -->
-    <nav class="top-nav">
-      <div class="container">
-        <div class="nav-links">
-          <a href="/">← 返回首页</a>
-          <a href="mailto:hi@tinytypezoo.com">联系我们</a>
-        </div>
-      </div>
-    </nav>
-
     <div class="policy-page">
       <div class="container">
         <article class="policy-content">
