@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版小动物/tinytype 儿童/青少年个人信息保护规则</title>
+    <meta property="og:title" content="排版小动物/tinytype 儿童/青少年个人信息保护规则" />
+    <meta property="og:description" content="一群温暖的陪你记录生活的小动物" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tinytypezoo.com/child-policy.html" />
+    <meta property="og:image" content="https://tinytypezoo.com/1024.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="排版小动物/tinytype 儿童/青少年个人信息保护规则" />
+    <meta name="twitter:description" content="一群温暖的陪你记录生活的小动物" />
+    <meta name="twitter:image" content="https://tinytypezoo.com/1024.png" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <style>
+        /* 全局样式 from src/styles/global.css */
+        :root {
+          /* 颜色变量 */
+          --primary-color: #2563eb;
+          --primary-hover: #1d4ed8;
+          --text-primary: #1f2937;
+          --text-secondary: #6b7280;
+          --bg-primary: #ffffff;
+          --bg-secondary: #f9fafb;
+          --border-color: #e5e7eb;
+          
+          /* 间距变量 */
+          --spacing-xs: 0.5rem;
+          --spacing-sm: 1rem;
+          --spacing-md: 1.5rem;
+          --spacing-lg: 2rem;
+          --spacing-xl: 3rem;
+          
+          /* 字体大小 */
+          --font-xs: 0.75rem;
+          --font-sm: 0.875rem;
+          --font-base: 1rem;
+          --font-lg: 1.125rem;
+          --font-xl: 1.25rem;
+          --font-2xl: 1.5rem;
+          --font-3xl: 1.875rem;
+          
+          /* 圆角 */
+          --radius-sm: 0.375rem;
+          --radius-md: 0.5rem;
+          --radius-lg: 0.75rem;
+          
+          /* 阴影 */
+          --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 暗色模式 */
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --border-color: #374151;
+          }
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html {
+          font-size: 16px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+          color: var(--text-primary);
+          background-color: var(--bg-primary);
+          line-height: 1.6;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+          .container {
+            padding: 0 var(--spacing-sm);
+          }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 600;
+          line-height: 1.4;
+          margin-bottom: var(--spacing-sm);
+        }
+
+        h1 { font-size: var(--font-3xl); }
+        h2 { font-size: var(--font-2xl); }
+        h3 { font-size: var(--font-xl); }
+        p {
+          margin-bottom: var(--spacing-md);
+          color: var(--text-secondary);
+        }
+        a {
+          color: var(--primary-color);
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+        a:hover { color: var(--primary-hover); }
+
+        /* 页面样式 from src/pages/PolicyPage.css */
+        .policy-page {
+          min-height: calc(100vh - 200px);
+        }
+        .policy-content {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: var(--spacing-lg) 0;
+        }
+        .policy-title {
+          text-align: center;
+          margin-bottom: var(--spacing-lg);
+          color: var(--text-primary);
+          font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+        .policy-meta {
+          text-align: center;
+          margin-bottom: var(--spacing-xl);
+          padding-bottom: var(--spacing-lg);
+          border-bottom: 1px solid var(--border-color);
+        }
+        .policy-meta p {
+          margin-bottom: var(--spacing-xs);
+          color: var(--text-secondary);
+          font-size: var(--font-sm);
+        }
+        .policy-section {
+          margin-bottom: var(--spacing-xl);
+        }
+        .policy-section h2 {
+          color: var(--text-primary);
+          margin-bottom: var(--spacing-md);
+          margin-top: var(--spacing-xl);
+          font-size: var(--font-2xl);
+        }
+        .policy-section h3 {
+          color: var(--text-primary);
+          margin-bottom: var(--spacing-sm);
+          margin-top: var(--spacing-lg);
+          font-size: var(--font-xl);
+        }
+        .policy-section p {
+          line-height: 1.8;
+          color: var(--text-secondary);
+        }
+        .policy-section ul,
+        .policy-section ol {
+          margin-left: var(--spacing-lg);
+          margin-bottom: var(--spacing-md);
+        }
+        .policy-section li {
+          margin-bottom: var(--spacing-sm);
+          line-height: 1.8;
+          color: var(--text-secondary);
+        }
+        .policy-section li strong {
+          color: var(--text-primary);
+        }
+        .policy-section .highlight {
+          background-color: rgba(37, 99, 235, 0.1);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          border-left: 4px solid var(--primary-color);
+          margin: var(--spacing-md) 0;
+          font-weight: 500;
+          color: var(--text-primary);
+        }
+        .policy-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: var(--spacing-md) 0;
+          overflow-x: auto;
+          display: block;
+        }
+        .policy-table table {
+          width: 100%;
+          min-width: 600px;
+        }
+        .policy-table th,
+        .policy-table td {
+          padding: var(--spacing-sm);
+          text-align: left;
+          border: 1px solid var(--border-color);
+        }
+        .policy-table th {
+          background-color: var(--bg-secondary);
+          font-weight: 600;
+          color: var(--text-primary);
+        }
+        .policy-table td {
+          color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+          .policy-content {
+            padding: var(--spacing-md) 0;
+          }
+          .policy-title {
+            font-size: var(--font-xl);
+          }
+          .policy-section h2 {
+            font-size: var(--font-lg);
+          }
+          .policy-section h3 {
+            font-size: var(--font-base);
+          }
+          .policy-section ul,
+          .policy-section ol {
+            margin-left: var(--spacing-md);
+          }
+          .policy-table {
+            font-size: var(--font-sm);
+          }
+          .policy-table th,
+          .policy-table td {
+            padding: var(--spacing-xs);
+          }
+        }
+        @media (prefers-color-scheme: dark) {
+          .policy-section .highlight {
+            background-color: rgba(59, 130, 246, 0.1);
+          }
+        }
+
+        /* 目录 */
+        .toc {
+          background-color: var(--bg-secondary);
+          border-radius: var(--radius-lg);
+          padding: var(--spacing-lg);
+          margin: var(--spacing-xl) 0;
+        }
+        .toc h3 {
+          font-size: var(--font-lg);
+          margin-bottom: var(--spacing-md);
+          color: var(--text-primary);
+        }
+        .toc ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .toc ul li {
+          margin-bottom: var(--spacing-sm);
+        }
+        .toc ul li a {
+          color: var(--text-secondary);
+          font-size: var(--font-base);
+          display: block;
+          padding: var(--spacing-xs) 0;
+          transition: all 0.2s ease;
+        }
+        .toc ul li a:hover {
+          color: var(--primary-color);
+          padding-left: var(--spacing-xs);
+        }
+
+        @media (max-width: 768px) {
+          .toc {
+            padding: var(--spacing-md);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="policy-page">
+      <div class="container">
+        <article class="policy-content">
+          <h1 class="policy-title">排版小动物儿童/青少年个人信息保护规则</h1>
+          
+          <div class="policy-meta">
+            <p>更新日期：2025年11月7日</p>
+          </div>
+
+          <!-- 目录 -->
+          <nav class="toc">
+            <h3>目录</h3>
+            <ul>
+              <li><a href="#intro">引言</a></li>
+              <li><a href="#section1">一、儿童/青少年信息收集和保护</a></li>
+              <li><a href="#section2">二、其他</a></li>
+            </ul>
+          </nav>
+
+          <section class="policy-section" id="intro">
+            <h2>引言</h2>
+            <p>
+              排版小动物深知保护青少年（指未满十八周岁的未成年人）和儿童（特指未满十四周岁的未成年人）个人信息安全和隐私的重要性。
+              在《排版小动物 用户隐私政策》的基础上，我们通过《排版小动物儿童/青少年个人信息保护规则》（以下简称"本政策"）
+              说明我们在收集和使用儿童/青少年（以下可统称为未成年人）个人信息时对应的处理规则和相关事宜。
+              当本政策与《排版小动物 用户隐私政策》正文存在不一致的，本政策将优先适用。本政策未载明之处，则参照适用《排版小动物 用户隐私政策》。
+              您通过线上界面点击同意本政策表示您同意我们按照本政策收集、使用、存储、共享、转让和披露等处理儿童的个人信息。
+            </p>
+            <p><strong>监护人特别说明：</strong></p>
+            <p>
+              为了维护您孩子的合法权益，我们希望您可以确保您的孩子在您的同意和指导下使用我们的产品并向我们提交个人信息。
+              我们将根据本政策采取特殊措施保护相关信息。如果您不同意本政策的内容，请您要求您的孩子立即停止访问/使用我们的产品及服务。
+            </p>
+            <p><strong>儿童/青少年特别说明：</strong></p>
+            <p>
+              如果您是未成年人，请通知您的监护人共同阅读本政策，并在您使用我们的产品及服务、提交个人信息之前，寻求您的监护人的指导。
+              若您未满十四周岁，请在获得您监护人的明确同意后再使用我们的产品及服务、提交个人信息。
+            </p>
+          </section>
+
+          <section class="policy-section" id="section1">
+            <h2>一、儿童/青少年信息收集和保护</h2>
+            <p>
+              我们会严格履行法律法规规定的儿童/青少年个人信息保护义务与责任，遵循正当必要、知情同意、目的明确、安全保障、依法利用的原则。
+            </p>
+
+            <h3 id="section1-1">1.1 我们如何收集和使用儿童/青少年个人信息</h3>
+            <p>
+              请您知悉，我们没有专门面向儿童/青少年提供的产品或服务，因此在我们无法自动识别和判断所收集和处理的个人信息是否属于儿童/青少年个人信息时，
+              我们将按照《排版小动物用户隐私政策》收集和处理用户的个人信息。但如用户通过实名认证或者其他方式使得我们获悉用户的儿童/青少年身份后，
+              我们将尽到合理义务提醒用户在监护人的陪护和指导下使用我们的服务。此外，我们将依据本政策和法律法规的要求，对涉及儿童/青少年个人信息的账号采取特殊保护措施。
+            </p>
+            <p>
+              为向儿童/青少年提供我们的产品及服务目的，我们可能会收集和使用儿童/青少年个人信息。有关具体的使用目的、收集个人信息的范围，以及拒绝提供信息的后果，
+              您及监护人可以查阅《排版小动物用户隐私政策》详细了解。
+            </p>
+            <p>
+              我们使用的 Cookies 和其他同类技术也可能涉及自动收集儿童的个人信息，具体请您查阅《排版小动物用户隐私政策》"我们如何使用 Cookie 和其他同类技术"相关部分详细了解。
+              如我们超出上述范围收集和使用儿童个人信息，我们将再次征得儿童监护人的同意。
+            </p>
+            <p>
+              您知悉并确认，根据相关法律法规规定，以下情形中收集儿童/青少年的信息可能无需征得儿童/青少年监护人的授权同意：
+            </p>
+            <ol>
+              <li>为订立、履行个人作为一方当事人的合同所必需；</li>
+              <li>为履行法定职责或者法定义务所必需；</li>
+              <li>为应对突发公共卫生事件，或者紧急情况下为保护自然人的生命健康和财产安全所必需；</li>
+              <li>为公共利益实施新闻报道、舆论监督等行为，在合理的范围内处理个人信息；</li>
+              <li>依照法律规定在合理的范围内处理个人自行公开或者其他已经合法公开的个人信息；</li>
+              <li>法律法规规定的其他情形。</li>
+            </ol>
+
+            <h3 id="section1-2">1.2 我们如何存储儿童/青少年个人信息</h3>
+            <p>
+              我们在境内运营过程中收集和产生的儿童/青少年人个人信息存储于中华人民共和国境内，不会传输或存储至境外。
+              如果发生信息的跨境传输，我们会单独向您以站内通知或邮件的方式告知您个人信息出境的目的、接收方、安全保障措施等情况，并征得您的单独授权同意。
+            </p>
+            <p>
+              我们会采取合理可行的措施，尽力避免收集和处理无关的儿童的个人信息。
+              我们只会在达成本政策所述目的所需的期限内保留儿童/青少年的个人信息，除非法律有强制的留存要求。
+              关于我们如何确定儿童/青少年个人信息存储期限请参见《排版小动物用户隐私政策》的"我们如何存储和保护您的个人信息"部分。
+            </p>
+            <p>
+              如我们终止服务或运营，我们将及时停止继续收集儿童/青少年个人信息的活动，同时会遵守相关法律法规要求提前向监护人通知，
+              并在终止服务或运营后对儿童/青少年的个人信息进行删除或匿名化处理，但法律法规或监管部门另有规定的除外。
+            </p>
+
+            <h3 id="section1-3">1.3 我们如何共享、转让、公开披露儿童/青少年个人信息</h3>
+            <p>
+              我们承诺对儿童/青少年个人信息进行严格保密，仅在符合本政策说明和您明确授权同意的情况下对外共享儿童个人信息。
+              具体请参见《排版小动物 用户隐私政策》"我们如何共享、转让、公开披露您的信息"部分。
+            </p>
+            <p>
+              为了确保儿童/青少年个人信息对外提供的安全性，一般情况下我们不会委托第三方处理儿童/青少年个人信息。
+              如确需委托第三方处理儿童/青少年个人信息时，我们将对受托方个人信息保护资质能力及受托处理行为进行安全评估，同时签署数据委托处理协议，
+              明确双方责任、处理事项、处理期限、处理性质和目的，保证委托行为不得超出授权范围。
+            </p>
+            <p>具体而言：</p>
+            <ol>
+              <li>我们将在共享或委托处理前根据法律、行政法规的规定采取合规措施，包括但不限于自行或者委托第三方机构就儿童/青少年个人信息共享的合法性、正当性、必要性，及其保护儿童/青少年个人信息的能力进行评估。</li>
+              <li>我们将在签署的相关协议中明确要求第三方对儿童/青少年个人信息采取保护措施，严格遵守相关法律法规与监管要求。
+                  我们会要求接收儿童/青少年个人信息的第三方遵守严格的保密义务及采取有效的保密措施，以不低于本政策的儿童/青少年个人信息保护水平处理儿童/青少年个人信息，
+                  禁止其将儿童/青少年个人信息用于未经儿童/青少年及其监护人授权的用途，并要求受托公司依法履行以下义务：
+                  <ol type="a">
+                    <li>按照法律、行政法规的规定和我们的要求处理儿童/青少年个人信息；</li>
+                    <li>协助我们回应儿童/青少年监护人提出的申请；</li>
+                    <li>采取措施保障信息安全，并在发生儿童/青少年个人信息泄露安全事件时，及时向我们反馈；</li>
+                    <li>委托关系解除时及时删除儿童/青少年个人信息；</li>
+                    <li>不得转委托；</li>
+                    <li>其他依法应当履行的儿童/青少年个人信息保护义务。</li>
+                  </ol>
+              </li>
+            </ol>
+
+            <h3 id="section1-4">1.4 我们如何保护儿童/青少年个人信息</h3>
+            <p>
+              我们非常重视儿童/青少年的隐私安全，并指定了专人负责儿童个人信息的保护，采取一切合理可行的措施，保护儿童个人信息。
+              我们有专门的安全部门和数据安全流程保障未成年人信息安全。我们采取严格的数据使用和访问制度，确保只有授权人员才可访问，并适时对数据和技术进行安全审计。
+              同时，我们会采取加密措施及其他技术手段存储儿童/青少年个人信息，确保儿童/青少年个人信息安全。
+              如您希望了解更多，请查阅《排版小动物用户隐私政策》的"我们如何存储和保护您的个人信息"章节，详细了解我们如何采取了哪些措施保护儿童/青少年个人信息。
+            </p>
+
+            <h3 id="section1-5">1.5 如何管理儿童/青少年个人信息</h3>
+            <p>
+              为了您或儿童/青少年在使用我们的产品及服务期间可以更加便捷地访问、管理个人信息，我们在产品中为您和儿童/青少年提供了相应的操作设置，
+              您和儿童/青少年可以按照《排版小动物用户隐私政策》中的"您如何管理您的个人信息"章节指引进行操作。
+            </p>
+            <p>
+              下列情形下，您或儿童/青少年可以通过《排版小动物用户隐私政策》的"如何联系我们"章节所列的渠道联系我们，要求删除相应的儿童/青少年个人信息：
+            </p>
+            <ol>
+              <li>我们违反法律、行政法规的规定或者双方的约定收集、存储、使用、对外提供儿童/青少年个人信息的；</li>
+              <li>超出目的范围或者必要期限收集、存储、使用、对外提供儿童/青少年个人信息的；</li>
+              <li>您撤回同意的；</li>
+              <li>您或儿童/青少年通过注销等方式终止使用产品或者服务的。</li>
+            </ol>
+          </section>
+
+          <section class="policy-section" id="section2">
+            <h2>二、其他</h2>
+            <p>
+              在用户未明示的一般情形下，我们无法识别且不会判断收集和处理的个人信息是否属于儿童/青少年个人信息，我们将严格按照《排版小动物用户隐私政策》收集和处理用户的个人信息。
+            </p>
+            <p>
+              如您对本政策存在任何疑问，或对于儿童个人信息处理存在任何投诉、意见，请通过 <strong>hi@tinytypezoo.com</strong> 联系我们，
+              我们在核验您的身份后，会根据您的请求和法律法规的规定进行处理。
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+</body>
+</html>
+
