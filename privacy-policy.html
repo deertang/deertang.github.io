@@ -186,6 +186,10 @@
           list-style-type: lower-alpha;
           margin-top: var(--spacing-sm);
         }
+        /* h3 标题后的列表也使用 a. b. c. */
+        .policy-section h3 ~ ol {
+          list-style-type: lower-alpha;
+        }
         /* 三级列表样式 - 使用 i. ii. iii. */
         .policy-section ol ol ol {
           list-style-type: lower-roman;
