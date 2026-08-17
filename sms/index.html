@@ -155,14 +155,14 @@
         .download-dock {
             position: fixed;
             z-index: 50;
-            left: 50%;
+            left: 0;
+            right: 0;
             bottom: 0;
-            width: min(calc(100% - 24px), 620px);
-            padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-            transform: translateX(-50%);
+            width: 100%;
+            padding: 5px 13px calc(5px + env(safe-area-inset-bottom));
             border: 2px solid #302b24;
             border-bottom: 0;
-            border-radius: 24px 24px 0 0;
+            border-radius: 19px 19px 0 0;
             background: rgb(255 248 199 / 96%);
             box-shadow: 0 -5px 24px rgb(43 34 16 / 20%);
             backdrop-filter: blur(8px);
@@ -170,11 +170,11 @@
         }
 
         .download-dock__title {
-            margin-bottom: 7px;
+            margin-bottom: 3px;
             color: #302b24;
-            font-size: 14px;
+            font-size: 10px;
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.2;
             text-align: center;
         }
 
@@ -182,12 +182,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .download-link {
             display: block;
-            width: min(46%, 226px);
+            flex: 0 0 181px;
+            width: 181px;
             border-radius: 999px;
             transition: transform 160ms ease;
             -webkit-tap-highlight-color: transparent;
@@ -240,23 +241,29 @@
 
             .download-dock {
                 width: 100%;
-                padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
-                border-right: 0;
-                border-left: 0;
-                border-radius: 18px 18px 0 0;
+                padding: 3px 8px calc(3px + env(safe-area-inset-bottom));
+                border-radius: 14px 14px 0 0;
             }
 
             .download-dock__title {
-                margin-bottom: 5px;
-                font-size: 12px;
+                margin-bottom: 2px;
+                font-size: 9px;
             }
 
             .download-dock__actions {
-                gap: 8px;
+                gap: 6px;
             }
 
             .download-link {
-                width: min(48%, 205px);
+                flex: 0 0 164px;
+                width: 164px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .download-link {
+                flex: 0 0 min(164px, calc((100vw - 22px) / 2));
+                width: min(164px, calc((100vw - 22px) / 2));
             }
         }
 
