@@ -39,17 +39,177 @@
         }
 
         main {
+            position: relative;
             width: 100%;
             max-width: 1125px;
             line-height: 0;
         }
 
-        img {
+        .landing-image {
             display: block;
             width: 100%;
             height: auto;
             aspect-ratio: 1125 / 13370;
             object-fit: contain;
+        }
+
+        .hotspot {
+            position: absolute;
+            z-index: 2;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hotspot:focus-visible {
+            outline: 4px solid #ff6a3d;
+            outline-offset: 2px;
+        }
+
+        .follow-hotspot {
+            left: 25.3333%;
+            top: 9.5737%;
+            width: 49.3333%;
+            height: 1.6455%;
+        }
+
+        .letter-hotspot {
+            width: 28.8889%;
+            height: 1.1892%;
+        }
+
+        .letter-hotspot.left {
+            left: 12.8889%;
+        }
+
+        .letter-hotspot.right {
+            left: 57.3333%;
+        }
+
+        .letter-hotspot.row-1 {
+            top: 25.7517%;
+        }
+
+        .letter-hotspot.row-2 {
+            top: 29.1698%;
+        }
+
+        .letter-hotspot.row-3 {
+            top: 32.5879%;
+        }
+
+        .letter-hotspot.row-4 {
+            top: 36.1032%;
+        }
+
+        .letter-modal {
+            position: fixed;
+            z-index: 100;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: max(20px, env(safe-area-inset-top)) 20px
+                max(20px, env(safe-area-inset-bottom));
+            background: rgb(0 0 0 / 72%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .letter-modal.open {
+            display: flex;
+        }
+
+        .letter-dialog {
+            position: relative;
+            width: min(100%, 620px);
+            max-height: calc(100dvh - 40px);
+            line-height: normal;
+        }
+
+        .letter-image {
+            display: block;
+            width: 100%;
+            max-height: calc(100dvh - 40px);
+            object-fit: contain;
+        }
+
+        .letter-close {
+            position: absolute;
+            top: 2.5%;
+            right: 3%;
+            width: 44px;
+            height: 44px;
+            border: 2px solid #392a2a;
+            border-radius: 50%;
+            background: #fff8e8;
+            color: #392a2a;
+            font-size: 30px;
+            line-height: 36px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 18%);
+        }
+
+        .download-dock {
+            position: fixed;
+            z-index: 50;
+            left: 50%;
+            bottom: 0;
+            width: min(calc(100% - 24px), 620px);
+            padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+            transform: translateX(-50%);
+            border: 2px solid #302b24;
+            border-bottom: 0;
+            border-radius: 24px 24px 0 0;
+            background: rgb(255 248 199 / 96%);
+            box-shadow: 0 -5px 24px rgb(43 34 16 / 20%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .download-dock__title {
+            margin-bottom: 7px;
+            color: #302b24;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .download-dock__actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .download-link {
+            display: block;
+            width: min(46%, 226px);
+            border-radius: 999px;
+            transition: transform 160ms ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .download-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .download-link:focus-visible {
+            outline: 3px solid #ff6a3d;
+            outline-offset: 3px;
+        }
+
+        .download-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        body.modal-open {
+            overflow: hidden;
         }
 
         @media (max-width: 1125px) {
@@ -64,11 +224,53 @@
                 max-width: 100%;
             }
         }
+
+        @media (max-width: 480px) {
+            .letter-modal {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            .letter-close {
+                width: 40px;
+                height: 40px;
+                font-size: 27px;
+                line-height: 32px;
+            }
+
+            .download-dock {
+                width: 100%;
+                padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
+                border-right: 0;
+                border-left: 0;
+                border-radius: 18px 18px 0 0;
+            }
+
+            .download-dock__title {
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+
+            .download-dock__actions {
+                gap: 8px;
+            }
+
+            .download-link {
+                width: min(48%, 205px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .download-link {
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body>
     <main aria-label="排版小动物落地页">
         <img
+            class="landing-image"
             src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%90%BD%E5%9C%B0%E9%A1%B51.jpg"
             width="1125"
             height="13370"
@@ -76,6 +278,98 @@
             decoding="async"
             fetchpriority="high"
         >
+        <a
+            class="hotspot follow-hotspot"
+            href="https://www.xiaohongshu.com/user/profile/689c55210000000019004f51"
+            aria-label="关注排版小动物"
+        ></a>
+        <button class="hotspot letter-hotspot left row-1" type="button" data-letter="Tsuki" aria-label="打开 Tsuki 的来信"></button>
+        <button class="hotspot letter-hotspot right row-1" type="button" data-letter="亮亮" aria-label="打开亮亮的来信"></button>
+        <button class="hotspot letter-hotspot left row-2" type="button" data-letter="迈尔斯" aria-label="打开迈尔斯的来信"></button>
+        <button class="hotspot letter-hotspot right row-2" type="button" data-letter="路易" aria-label="打开路易的来信"></button>
+        <button class="hotspot letter-hotspot left row-3" type="button" data-letter="老师傅" aria-label="打开老师傅的来信"></button>
+        <button class="hotspot letter-hotspot right row-3" type="button" data-letter="拉尔夫" aria-label="打开拉尔夫的来信"></button>
+        <button class="hotspot letter-hotspot left row-4" type="button" data-letter="主任" aria-label="打开主任的来信"></button>
+        <button class="hotspot letter-hotspot right row-4" type="button" data-letter="kaka" aria-label="打开 kaka 的来信"></button>
     </main>
+
+    <aside class="download-dock" aria-label="下载排版小动物">
+        <p class="download-dock__title">和小动物一起，记录生活里每一种喜欢</p>
+        <div class="download-dock__actions">
+            <a
+                class="download-link"
+                href="https://apps.apple.com/cn/app/%E6%8E%92%E7%89%88%E5%B0%8F%E5%8A%A8%E7%89%A9-tinytype-%E4%BD%A0%E7%9A%84%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B/id6749688592"
+                aria-label="前往 App Store 下载排版小动物"
+            >
+                <img src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%8B%B9%E6%9E%9C%E7%89%88%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE.png" width="452" height="167" alt="App Store 点击下载">
+            </a>
+            <a
+                class="download-link"
+                href="https://sj.qq.com/appdetail/com.tiny.type"
+                aria-label="下载 Android 版排版小动物"
+            >
+                <img src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E5%AE%89%E5%8D%93%E7%89%88%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE.png" width="452" height="167" alt="Android 点击下载">
+            </a>
+        </div>
+    </aside>
+
+    <div class="letter-modal" id="letter-modal" role="dialog" aria-modal="true" aria-label="小动物的来信">
+        <div class="letter-dialog">
+            <img class="letter-image" id="letter-image" src="" width="1125" height="1439" alt="">
+            <button class="letter-close" id="letter-close" type="button" aria-label="关闭来信">×</button>
+        </div>
+    </div>
+
+    <script>
+        const letterImages = {
+            Tsuki: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_Tsuki.png",
+            亮亮: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%BA%AE%E4%BA%AE.png",
+            迈尔斯: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%BF%88%E5%B0%94%E6%96%AF.png",
+            路易: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%B7%AF%E6%98%93.png",
+            老师傅: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%80%81%E5%B8%88%E5%82%85.png",
+            拉尔夫: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E6%8B%89%E5%B0%94%E5%A4%AB.png",
+            主任: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%B8%BB%E4%BB%BB.png",
+            kaka: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_kaka.png"
+        };
+
+        const modal = document.getElementById("letter-modal");
+        const letterImage = document.getElementById("letter-image");
+        const closeButton = document.getElementById("letter-close");
+        let lastTrigger = null;
+
+        function openLetter(animal, trigger) {
+            letterImage.src = letterImages[animal];
+            letterImage.alt = `${animal} 写给你的来信`;
+            modal.classList.add("open");
+            document.body.classList.add("modal-open");
+            lastTrigger = trigger;
+            closeButton.focus();
+        }
+
+        function closeLetter() {
+            modal.classList.remove("open");
+            document.body.classList.remove("modal-open");
+            letterImage.src = "";
+            if (lastTrigger) {
+                lastTrigger.focus();
+            }
+        }
+
+        document.querySelectorAll("[data-letter]").forEach((button) => {
+            button.addEventListener("click", () => openLetter(button.dataset.letter, button));
+        });
+
+        closeButton.addEventListener("click", closeLetter);
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeLetter();
+            }
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && modal.classList.contains("open")) {
+                closeLetter();
+            }
+        });
+    </script>
 </body>
 </html>
