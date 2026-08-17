@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>排版小动物 · 小动物邮局</title>
+    <title>排版小动物 · 欢迎来到小动物邮局</title>
     <meta name="description" content="欢迎来到小动物邮局——和温暖的小动物一起记录生活" />
-    <meta property="og:title" content="排版小动物 · 小动物邮局" />
+    <meta property="og:title" content="排版小动物 · 欢迎来到小动物邮局" />
     <meta property="og:description" content="欢迎来到小动物邮局——和温暖的小动物一起记录生活" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tinytypezoo.com/sms" />
@@ -111,6 +111,20 @@
             height: 1.1892%;
         }
 
+        .download-hotspot {
+            top: 96.9334%;
+            width: 42%;
+            height: 1.87%;
+        }
+
+        .download-hotspot.ios {
+            left: 7%;
+        }
+
+        .download-hotspot.android {
+            left: 51%;
+        }
+
         .letter-modal {
             position: fixed;
             z-index: 100;
@@ -159,63 +173,6 @@
             box-shadow: 0 3px 10px rgb(0 0 0 / 18%);
         }
 
-        .download-dock {
-            position: fixed;
-            z-index: 50;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            padding: 5px 13px calc(5px + env(safe-area-inset-bottom));
-            border: 2px solid #302b24;
-            border-bottom: 0;
-            border-radius: 19px 19px 0 0;
-            background: rgb(255 248 199 / 96%);
-            box-shadow: 0 -5px 24px rgb(43 34 16 / 20%);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        .download-dock__title {
-            margin-bottom: 3px;
-            color: #302b24;
-            font-size: 10px;
-            font-weight: 700;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        .download-dock__actions {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .download-link {
-            display: block;
-            flex: 0 0 181px;
-            width: 181px;
-            border-radius: 999px;
-            transition: transform 160ms ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .download-link:hover {
-            transform: translateY(-2px);
-        }
-
-        .download-link:focus-visible {
-            outline: 3px solid #ff6a3d;
-            outline-offset: 3px;
-        }
-
-        .download-link img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
         body.modal-open {
             overflow: hidden;
         }
@@ -246,37 +203,10 @@
                 line-height: 32px;
             }
 
-            .download-dock {
-                width: 100%;
-                padding: 3px 8px calc(3px + env(safe-area-inset-bottom));
-                border-radius: 14px 14px 0 0;
-            }
-
-            .download-dock__title {
-                margin-bottom: 2px;
-                font-size: 9px;
-            }
-
-            .download-dock__actions {
-                gap: 6px;
-            }
-
-            .download-link {
-                flex: 0 0 164px;
-                width: 164px;
-            }
-        }
-
-        @media (max-width: 430px) {
-            .download-link {
-                flex: 0 0 min(164px, calc((100vw - 22px) / 2));
-                width: min(164px, calc((100vw - 22px) / 2));
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .download-link {
-                transition: none;
+            .letter-image {
+                width: 115%;
+                max-width: none;
+                margin-left: -7.5%;
             }
         }
     </style>
@@ -306,46 +236,36 @@
         <button class="hotspot letter-hotspot right row-3" type="button" data-letter="拉尔夫" aria-label="打开拉尔夫的来信"></button>
         <button class="hotspot letter-hotspot left row-4" type="button" data-letter="主任" aria-label="打开主任的来信"></button>
         <button class="hotspot letter-hotspot right row-4" type="button" data-letter="kaka" aria-label="打开 kaka 的来信"></button>
+        <a
+            class="hotspot download-hotspot ios"
+            href="https://apps.apple.com/cn/app/%E6%8E%92%E7%89%88%E5%B0%8F%E5%8A%A8%E7%89%A9-tinytype-%E4%BD%A0%E7%9A%84%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B/id6749688592"
+            aria-label="前往 App Store 下载排版小动物"
+        ></a>
+        <a
+            class="hotspot download-hotspot android"
+            href="https://sj.qq.com/appdetail/com.tiny.type"
+            aria-label="下载 Android 版排版小动物"
+        ></a>
     </main>
-
-    <aside class="download-dock" aria-label="下载排版小动物">
-        <p class="download-dock__title">和小动物一起，记录生活里每一种喜欢</p>
-        <div class="download-dock__actions">
-            <a
-                class="download-link"
-                href="https://apps.apple.com/cn/app/%E6%8E%92%E7%89%88%E5%B0%8F%E5%8A%A8%E7%89%A9-tinytype-%E4%BD%A0%E7%9A%84%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B/id6749688592"
-                aria-label="前往 App Store 下载排版小动物"
-            >
-                <img src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%8B%B9%E6%9E%9C%E7%89%88%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE.png" width="452" height="167" alt="App Store 点击下载">
-            </a>
-            <a
-                class="download-link"
-                href="https://sj.qq.com/appdetail/com.tiny.type"
-                aria-label="下载 Android 版排版小动物"
-            >
-                <img src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E5%AE%89%E5%8D%93%E7%89%88%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE.png" width="452" height="167" alt="Android 点击下载">
-            </a>
-        </div>
-    </aside>
 
     <div class="letter-modal" id="letter-modal" role="dialog" aria-modal="true" aria-label="小动物的来信">
         <div class="letter-dialog">
-            <img class="letter-image" id="letter-image" src="" width="1125" height="1439" alt="">
+            <img class="letter-image" id="letter-image" width="1125" height="1439" alt="" decoding="async">
             <button class="letter-close" id="letter-close" type="button" aria-label="关闭来信">×</button>
         </div>
     </div>
 
     <script>
         const letterImages = {
-            Tsuki: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_Tsuki.png",
-            亮亮: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%BA%AE%E4%BA%AE.png",
-            迈尔斯: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%BF%88%E5%B0%94%E6%96%AF.png",
-            路易: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%B7%AF%E6%98%93.png",
-            老师傅: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%80%81%E5%B8%88%E5%82%85.png",
-            拉尔夫: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E6%8B%89%E5%B0%94%E5%A4%AB.png",
-            主任: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%B8%BB%E4%BB%BB.png",
-            kaka: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_kaka.png",
-            茶茶: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%8C%B6%E8%8C%B6.png"
+            Tsuki: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_Tsuki.webp",
+            亮亮: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%BA%AE%E4%BA%AE.webp",
+            迈尔斯: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%BF%88%E5%B0%94%E6%96%AF.webp",
+            路易: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%B7%AF%E6%98%93.webp",
+            老师傅: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%80%81%E5%B8%88%E5%82%85.webp",
+            拉尔夫: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E6%8B%89%E5%B0%94%E5%A4%AB.webp",
+            主任: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E4%B8%BB%E4%BB%BB.webp",
+            kaka: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_kaka.webp",
+            茶茶: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%8C%B6%E8%8C%B6.webp"
         };
 
         const modal = document.getElementById("letter-modal");
@@ -365,7 +285,7 @@
         function closeLetter() {
             modal.classList.remove("open");
             document.body.classList.remove("modal-open");
-            letterImage.src = "";
+            letterImage.removeAttribute("src");
             if (lastTrigger) {
                 lastTrigger.focus();
             }
@@ -386,6 +306,20 @@
                 closeLetter();
             }
         });
+
+        function preloadLetters() {
+            Object.values(letterImages).forEach((src) => {
+                const image = new Image();
+                image.fetchPriority = "low";
+                image.src = src;
+            });
+        }
+
+        if ("requestIdleCallback" in window) {
+            requestIdleCallback(preloadLetters, { timeout: 1000 });
+        } else {
+            setTimeout(preloadLetters, 500);
+        }
     </script>
 </body>
 </html>
