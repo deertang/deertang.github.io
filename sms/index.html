@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>排版小动物 · 欢迎来到小动物邮局</title>
-    <meta name="description" content="欢迎来到小动物邮局——和温暖的小动物一起记录生活" />
-    <meta property="og:title" content="排版小动物 · 欢迎来到小动物邮局" />
-    <meta property="og:description" content="欢迎来到小动物邮局——和温暖的小动物一起记录生活" />
+    <meta name="description" content="欢迎来到小动物邮局" />
+    <meta itemprop="name" content="排版小动物" />
+    <meta itemprop="description" content="欢迎来到小动物邮局" />
+    <meta itemprop="image" content="https://tinytypezoo.com/assets/sms/tinytype-share-logo.png" />
+    <meta property="og:title" content="排版小动物" />
+    <meta property="og:description" content="欢迎来到小动物邮局" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tinytypezoo.com/sms" />
-    <meta property="og:image" content="https://tinytypezoo.com/assets/sms/落地页_落地页1.jpg" />
-    <meta property="og:image:width" content="1125" />
-    <meta property="og:image:height" content="13370" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://tinytypezoo.com/assets/sms/落地页_落地页1.jpg" />
+    <meta property="og:site_name" content="排版小动物" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://tinytypezoo.com/sms/" />
+    <meta property="og:image" content="https://tinytypezoo.com/assets/sms/tinytype-share-logo.png" />
+    <meta property="og:image:secure_url" content="https://tinytypezoo.com/assets/sms/tinytype-share-logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="排版小动物 Tiny Type" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="排版小动物" />
+    <meta name="twitter:description" content="欢迎来到小动物邮局" />
+    <meta name="twitter:image" content="https://tinytypezoo.com/assets/sms/tinytype-share-logo.png" />
+    <link rel="image_src" href="https://tinytypezoo.com/assets/sms/tinytype-share-logo.png" />
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <style>
         * {
@@ -177,6 +188,16 @@
             overflow: hidden;
         }
 
+        .wechat-share-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            opacity: 0.01;
+            pointer-events: none;
+        }
+
         @media (max-width: 1125px) {
             html,
             body {
@@ -212,6 +233,14 @@
     </style>
 </head>
 <body>
+    <img
+        class="wechat-share-image"
+        src="/assets/sms/tinytype-share-logo.png"
+        width="1024"
+        height="1024"
+        alt=""
+        aria-hidden="true"
+    >
     <main aria-label="排版小动物落地页">
         <img
             class="landing-image"
