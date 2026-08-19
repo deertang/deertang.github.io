@@ -424,18 +424,57 @@
             }
         };
 
+        const UBA_POINT_IDS = {
+            "cha_bai_dao_tinytype_collab_activity_page:PAGE_VIEW": 117430,
+            "cha_bai_dao_tinytype_collab_activity_page:PAGE_END": 117431,
+            "cha_bai_dao_tinytype_collab_activity_android_download_btn:CLICK": 117432,
+            "cha_bai_dao_tinytype_collab_activity_ios_download_btn:CLICK": 117433,
+            "cha_bai_dao_tinytype_collab_activity_receive_kaka_letter:CLICK": 117434,
+            "cha_bai_dao_tinytype_collab_activity_receive_director_letter:CLICK": 117435,
+            "cha_bai_dao_tinytype_collab_activity_follow_btn:CLICK": 117436,
+            "cha_bai_dao_tinytype_collab_activity_receive_chacha_letter:CLICK": 117437,
+            "cha_bai_dao_tinytype_collab_activity_receive_milk_tea_benefit_btn:CLICK": 117438,
+            "cha_bai_dao_tinytype_collab_activity_receive_tsuki_letter:CLICK": 117439,
+            "cha_bai_dao_tinytype_collab_activity_receive_liangliang_letter:CLICK": 117440,
+            "cha_bai_dao_tinytype_collab_activity_receive_miles_letter:CLICK": 117441,
+            "cha_bai_dao_tinytype_collab_activity_receive_louis_letter:CLICK": 117442,
+            "cha_bai_dao_tinytype_collab_activity_receive_master_letter:CLICK": 117443,
+            "cha_bai_dao_tinytype_collab_activity_receive_ralph_letter:CLICK": 117444,
+            "cha_bai_dao_tinytype_collab_activity_chacha_letter:IMPRESSION": 117463,
+            "cha_bai_dao_tinytype_collab_activity_chacha_letter_close_btn:CLICK": 117464,
+            "cha_bai_dao_tinytype_collab_activity_ralph_letter:IMPRESSION": 117465,
+            "cha_bai_dao_tinytype_collab_activity_ralph_letter_close_btn:CLICK": 117466,
+            "cha_bai_dao_tinytype_collab_activity_master_letter:IMPRESSION": 117467,
+            "cha_bai_dao_tinytype_collab_activity_master_letter_close_btn:CLICK": 117468,
+            "cha_bai_dao_tinytype_collab_activity_liangliang_letter:IMPRESSION": 117469,
+            "cha_bai_dao_tinytype_collab_activity_liangliang_letter_close_btn:CLICK": 117470,
+            "cha_bai_dao_tinytype_collab_activity_louis_letter:IMPRESSION": 117471,
+            "cha_bai_dao_tinytype_collab_activity_louis_letter_close_btn:CLICK": 117472,
+            "cha_bai_dao_tinytype_collab_activity_miles_letter:IMPRESSION": 117473,
+            "cha_bai_dao_tinytype_collab_activity_miles_letter_close_btn:CLICK": 117474,
+            "cha_bai_dao_tinytype_collab_activity_director_letter:IMPRESSION": 117475,
+            "cha_bai_dao_tinytype_collab_activity_director_letter_close_btn:CLICK": 117476,
+            "cha_bai_dao_tinytype_collab_activity_kaka_letter:IMPRESSION": 117477,
+            "cha_bai_dao_tinytype_collab_activity_kaka_letter_close_btn:CLICK": 117478,
+            "cha_bai_dao_tinytype_collab_activity_tsuki_letter:IMPRESSION": 117479,
+            "cha_bai_dao_tinytype_collab_activity_tsuki_letter_close_btn:CLICK": 117480
+        };
+
         function sendUbaEvent(moduleKey, action, attributes) {
             ubaState.eventSeq += 1;
+            const pointId = UBA_POINT_IDS[`${moduleKey}:${action}`];
             const eventInfo = {
                 page_key: UBA_PAGE_KEY,
                 module_key: moduleKey,
                 action: action,
-                event_key: `${moduleKey}_${action}`,
                 event_seq: ubaState.eventSeq,
                 event_time: Date.now(),
                 event_id: ubaUuid(),
                 url: window.location.href
             };
+            if (pointId) {
+                eventInfo.point_id = pointId;
+            }
             if (attributes && Object.keys(attributes).length) {
                 eventInfo.attributes = attributes;
             }
@@ -454,6 +493,7 @@
                 },
                 event_info: eventInfo
             };
+            const body = JSON.stringify(payload);
             return fetch(UBA_ENDPOINT, {
                 method: "POST",
                 headers: {
@@ -461,7 +501,7 @@
                     "content-type": "text/plain",
                     "Biz-Type": UBA_BIZ_TYPE
                 },
-                body: JSON.stringify(payload),
+                body: body,
                 keepalive: true,
                 mode: "cors"
             }).catch(() => {});
