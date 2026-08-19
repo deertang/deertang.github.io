@@ -467,6 +467,7 @@
                 page_key: UBA_PAGE_KEY,
                 module_key: moduleKey,
                 action: action,
+                event_key: `${UBA_PAGE_KEY}_${moduleKey}_${action}`,
                 event_seq: ubaState.eventSeq,
                 event_time: Date.now(),
                 event_id: ubaUuid(),
