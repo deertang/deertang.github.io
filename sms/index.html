@@ -311,6 +311,7 @@
         </div>
     </div>
 
+    <script src="/sms/tracker-sdk.js"></script>
     <script>
         const letterImages = {
             Tsuki: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_Tsuki.webp",
@@ -327,8 +328,6 @@
         const UBA_APP_ID = 270;
         const UBA_PAGE_KEY = "cha_bai_dao_tinytype_collab_activity";
         const UBA_PAGE_MODULE = "cha_bai_dao_tinytype_collab_activity_page";
-        const UBA_ENDPOINT = "https://spider-tracker.xiaohongshu.com/api/data";
-        const UBA_BIZ_TYPE = "1663676682";
         const UBA_USER_KEY = "tinytype_sms_uid";
 
         function ubaUuid() {
@@ -381,6 +380,11 @@
             pageViewAt: null,
             activeLetter: null
         };
+        window.TinytypeUbaSdk.init({
+            appId: UBA_APP_ID,
+            pageKey: UBA_PAGE_KEY,
+            userId: ubaState.userId
+        });
 
         const letterUbaConfig = {
             "茶茶": {
@@ -431,51 +435,11 @@
         };
 
         function sendUbaEvent(moduleKey, action, attributes) {
-            ubaState.eventSeq += 1;
-            const eventInfo = {
-                page_key: UBA_PAGE_KEY,
-                module_key: moduleKey,
-                action: action,
-                event_seq: ubaState.eventSeq,
-                event_time: Date.now(),
-                event_id: ubaUuid(),
-                route_matched_path: window.location.pathname,
-                url: window.location.href
-            };
-            eventInfo.attributes = Object.assign({
-                page_session_id: ubaState.sessionId
-            }, attributes || {});
-            const payload = {
-                context: {
-                    app_id: UBA_APP_ID,
-                    session_id: ubaState.sessionId,
-                    platform: ubaPlatform(),
-                    user_agent: navigator.userAgent || "",
-                    artifact_name: "tinytype-sms",
-                    artifact_version: "1.0.0",
-                    user_id: ubaState.userId,
-                    container_artifact_name: "uba",
-                    container_artifact_version: "1.0.1",
-                    attributes: {
-                        appId: String(UBA_APP_ID),
-                        eventTrackType: "COMPLEX",
-                        type: "CONSUMER"
-                    }
-                },
-                event_info: eventInfo
-            };
-            const body = JSON.stringify(payload);
-            return fetch(UBA_ENDPOINT, {
-                method: "POST",
-                headers: {
-                    accept: "application/json, text/plain, */*",
-                    "content-type": "text/plain",
-                    "biz-type": UBA_BIZ_TYPE
-                },
-                body: body,
-                keepalive: true,
-                mode: "cors"
-            }).catch(() => {});
+            const payload = { moduleKey, action };
+            if (attributes && Object.keys(attributes).length) {
+                payload.attributes = attributes;
+            }
+            return window.TinytypeUbaSdk.push(payload).catch(() => {});
         }
 
         function sendUbaPageView() {
