@@ -454,9 +454,8 @@
                     artifact_name: "tinytype-sms",
                     artifact_version: "1.0.0",
                     user_id: ubaState.userId,
-                    group_user_id: "",
-                    container_artifact_name: "",
-                    container_artifact_version: "",
+                    container_artifact_name: "uba",
+                    container_artifact_version: "1.0.1",
                     attributes: {
                         appId: String(UBA_APP_ID),
                         eventTrackType: "COMPLEX",
@@ -471,7 +470,7 @@
                 headers: {
                     accept: "application/json, text/plain, */*",
                     "content-type": "text/plain",
-                    "Biz-Type": UBA_BIZ_TYPE
+                    "biz-type": UBA_BIZ_TYPE
                 },
                 body: body,
                 keepalive: true,

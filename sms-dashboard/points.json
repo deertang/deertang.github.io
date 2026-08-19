@@ -1,5 +1,6 @@
 {
   "appId": 270,
+  "dashboardName": "tinytype 茶百道活动",
   "pageInstance": "cha_bai_dao_tinytype_collab_activity",
   "pageViewPointId": 117430,
   "pageEndPointId": 117431,
@@ -7,8 +8,8 @@
   "pageUrl": "https://tinytypezoo.com/sms/",
   "mainDashboardUrl": "https://tinytype-dashboard.devops.sit.xiaohongshu.com/dashboard",
   "metaLinks": {
-    "pageDetail": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-detail?appId=270&pageInstance=cha_bai_dao_tinytype_collab_activity&pvPointId=117430&pePointId=117431",
-    "pageOverview": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-overview?appId=270&applicationType=1&pageInstance=cha_bai_dao_tinytype_collab_activity&url=https%3A%2F%2Ftinytypezoo.com%2Fsms%2F&pvPointId=117430&pePointId=117431"
+    "pageDetail": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-detail?appId=270&pageInstance=cha_bai_dao_tinytype_collab_activity&pageNameZh=tinytype%20%E8%8C%B6%E7%99%BE%E9%81%93%E6%B4%BB%E5%8A%A8&pvPointId=117430&pePointId=117431",
+    "pageOverview": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-overview?appId=270&applicationType=1&pageInstance=cha_bai_dao_tinytype_collab_activity&pageNameZh=tinytype%20%E8%8C%B6%E7%99%BE%E9%81%93%E6%B4%BB%E5%8A%A8&url=https%3A%2F%2Ftinytypezoo.com%2Fsms%2F&pvPointId=117430&pePointId=117431"
   },
   "groups": [
     {

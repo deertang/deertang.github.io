@@ -325,7 +325,7 @@
 
     <div class="page">
         <header class="hero">
-            <h1>茶百道活动 · 小动物邮局</h1>
+            <h1 id="dashboard-title">tinytype 茶百道活动 · 小动物邮局</h1>
             <p>落地页 <a href="https://tinytypezoo.com/sms/" target="_blank" rel="noreferrer">tinytypezoo.com/sms/</a> · UBA appId 270 · 点位 117430</p>
         </header>
 
@@ -337,7 +337,8 @@
                 <input id="end-date" type="date">
             </label>
             <button class="primary" id="refresh-btn" type="button">刷新数据</button>
-            <a class="link-btn" id="meta-link" target="_blank" rel="noreferrer">UBA 官方看板</a>
+            <a class="link-btn" id="meta-link" target="_blank" rel="noreferrer">UBA 页面详情</a>
+            <a class="link-btn" id="meta-overview-link" target="_blank" rel="noreferrer">UBA 模块点击</a>
         </div>
 
         <div class="notice" id="notice"></div>
@@ -384,6 +385,8 @@
         const statusEl = document.getElementById("status");
         const noticeEl = document.getElementById("notice");
         const metaLink = document.getElementById("meta-link");
+        const metaOverviewLink = document.getElementById("meta-overview-link");
+        const dashboardTitle = document.getElementById("dashboard-title");
         const tabOverview = document.getElementById("tab-overview");
 
         tabOverview.href = MAIN_DASHBOARD_URL;
@@ -539,10 +542,17 @@
 
         async function bootstrap() {
             const config = await fetch("/api/config").then((res) => res.json());
+            if (config.dashboardName) {
+                dashboardTitle.textContent = `${config.dashboardName} · 小动物邮局`;
+                document.title = `${config.dashboardName} · 数据看板`;
+            }
             if (config.mainDashboardUrl) {
                 tabOverview.href = config.mainDashboardUrl;
             }
             metaLink.href = config.metaLinks.pageDetail;
+            if (config.metaLinks.pageOverview) {
+                metaOverviewLink.href = config.metaLinks.pageOverview;
+            }
             defaultDates(config.trackingStartDate);
             document.getElementById("refresh-btn").addEventListener("click", loadData);
             await loadData();
