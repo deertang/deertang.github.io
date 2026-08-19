@@ -310,9 +310,108 @@
             茶茶: "/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%8C%B6%E8%8C%B6.webp"
         };
 
+        const UBA_APP_ID = 270;
+        const UBA_PAGE_KEY = "cha_bai_dao_tinytype_collab_activity";
+        const UBA_PAGE_MODULE = "cha_bai_dao_tinytype_collab_activity_page";
+        const UBA_ENDPOINT = "https://spider-tracker.xiaohongshu.com/api/data";
+        const UBA_BIZ_TYPE = "1663676682";
+        const UBA_USER_KEY = "tinytype_sms_uid";
+
+        function ubaUuid() {
+            if (crypto.randomUUID) {
+                return crypto.randomUUID();
+            }
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+                const r = Math.random() * 16 | 0;
+                const v = c === "x" ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function getUbaUserId() {
+            try {
+                const stored = localStorage.getItem(UBA_USER_KEY);
+                if (stored) {
+                    return stored;
+                }
+                const created = ubaUuid();
+                localStorage.setItem(UBA_USER_KEY, created);
+                return created;
+            } catch (error) {
+                return ubaUuid();
+            }
+        }
+
+        function ubaPlatform() {
+            const ua = navigator.userAgent || "";
+            if (/iPhone|iPad|iPod/i.test(ua)) {
+                return "iOSBrowser";
+            }
+            if (/Android/i.test(ua)) {
+                return "AndroidBrowser";
+            }
+            if (/Mac OS X/i.test(ua)) {
+                return "Mac";
+            }
+            if (/Windows/i.test(ua)) {
+                return "Windows";
+            }
+            return "others";
+        }
+
+        const ubaState = {
+            eventSeq: 0,
+            sessionId: ubaUuid(),
+            userId: getUbaUserId(),
+            pageViewSent: false
+        };
+
+        function sendUbaPageView() {
+            if (ubaState.pageViewSent) {
+                return;
+            }
+            ubaState.pageViewSent = true;
+            ubaState.eventSeq += 1;
+            const payload = {
+                context: {
+                    app_id: UBA_APP_ID,
+                    session_id: ubaState.sessionId,
+                    platform: ubaPlatform(),
+                    user_agent: navigator.userAgent || "",
+                    artifact_name: "tinytype-sms",
+                    artifact_version: "1.0.0",
+                    user_id: ubaState.userId,
+                    group_user_id: "",
+                    container_artifact_name: "",
+                    container_artifact_version: ""
+                },
+                event_info: {
+                    page_key: UBA_PAGE_KEY,
+                    module_key: UBA_PAGE_MODULE,
+                    action: "PAGE_VIEW",
+                    event_seq: ubaState.eventSeq,
+                    event_time: Date.now(),
+                    event_id: ubaUuid(),
+                    url: window.location.href
+                }
+            };
+            fetch(UBA_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    accept: "application/json, text/plain, */*",
+                    "content-type": "text/plain",
+                    "Biz-Type": UBA_BIZ_TYPE
+                },
+                body: JSON.stringify(payload),
+                keepalive: true,
+                mode: "cors"
+            }).catch(() => {});
+        }
+
         const modal = document.getElementById("letter-modal");
         const letterImage = document.getElementById("letter-image");
         const closeButton = document.getElementById("letter-close");
+        const landingImage = document.querySelector(".landing-image");
         let lastTrigger = null;
 
         function openLetter(animal, trigger) {
@@ -348,6 +447,21 @@
                 closeLetter();
             }
         });
+
+        function startUbaPageView() {
+            sendUbaPageView();
+        }
+
+        if (landingImage) {
+            if (landingImage.complete) {
+                startUbaPageView();
+            } else {
+                landingImage.addEventListener("load", startUbaPageView, { once: true });
+                landingImage.addEventListener("error", startUbaPageView, { once: true });
+            }
+        } else {
+            startUbaPageView();
+        }
 
         function preloadLetters() {
             Object.values(letterImages).forEach((src) => {
