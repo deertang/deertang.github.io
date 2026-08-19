@@ -263,12 +263,16 @@
             class="hotspot follow-hotspot"
             href="https://www.xiaohongshu.com/user/profile/689c55210000000019004f51"
             aria-label="关注排版小动物"
+            data-uba-module="cha_bai_dao_tinytype_collab_activity_follow_btn"
+            data-uba-action="CLICK"
         ></a>
         <button class="hotspot letter-hotspot chacha" type="button" data-letter="茶茶" aria-label="打开茶茶的来信"></button>
         <a
             class="hotspot coupon-hotspot"
             href="https://sc.shuxinyc.com/Hcu6sfW0O"
             aria-label="点击领取奶茶福利券"
+            data-uba-module="cha_bai_dao_tinytype_collab_activity_receive_milk_tea_benefit_btn"
+            data-uba-action="CLICK"
         ></a>
         <button class="hotspot letter-hotspot left row-1" type="button" data-letter="Tsuki" aria-label="打开 Tsuki 的来信"></button>
         <button class="hotspot letter-hotspot right row-1" type="button" data-letter="亮亮" aria-label="打开亮亮的来信"></button>
@@ -282,11 +286,15 @@
             class="hotspot download-hotspot ios"
             href="https://apps.apple.com/cn/app/%E6%8E%92%E7%89%88%E5%B0%8F%E5%8A%A8%E7%89%A9-tinytype-%E4%BD%A0%E7%9A%84%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B/id6749688592"
             aria-label="前往 App Store 下载排版小动物"
+            data-uba-module="cha_bai_dao_tinytype_collab_activity_ios_download_btn"
+            data-uba-action="CLICK"
         ></a>
         <a
             class="hotspot download-hotspot android"
             href="https://sj.qq.com/appdetail/com.tiny.type"
             aria-label="下载 Android 版排版小动物"
+            data-uba-module="cha_bai_dao_tinytype_collab_activity_android_download_btn"
+            data-uba-action="CLICK"
         ></a>
     </main>
 
@@ -363,14 +371,60 @@
             eventSeq: 0,
             sessionId: ubaUuid(),
             userId: getUbaUserId(),
-            pageViewSent: false
+            pageViewSent: false,
+            pageViewAt: null,
+            activeLetter: null
         };
 
-        function sendUbaPageView() {
-            if (ubaState.pageViewSent) {
-                return;
+        const letterUbaConfig = {
+            "茶茶": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_chacha_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_chacha_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_chacha_letter_close_btn"
+            },
+            Tsuki: {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_tsuki_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_tsuki_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_tsuki_letter_close_btn"
+            },
+            "亮亮": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_liangliang_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_liangliang_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_liangliang_letter_close_btn"
+            },
+            "迈尔斯": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_miles_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_miles_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_miles_letter_close_btn"
+            },
+            "路易": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_louis_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_louis_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_louis_letter_close_btn"
+            },
+            "老师傅": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_master_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_master_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_master_letter_close_btn"
+            },
+            "拉尔夫": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_ralph_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_ralph_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_ralph_letter_close_btn"
+            },
+            "主任": {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_director_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_director_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_director_letter_close_btn"
+            },
+            kaka: {
+                click: "cha_bai_dao_tinytype_collab_activity_receive_kaka_letter",
+                impression: "cha_bai_dao_tinytype_collab_activity_kaka_letter",
+                close: "cha_bai_dao_tinytype_collab_activity_kaka_letter_close_btn"
             }
-            ubaState.pageViewSent = true;
+        };
+
+        function sendUbaEvent(moduleKey, action, attrs) {
             ubaState.eventSeq += 1;
             const payload = {
                 context: {
@@ -387,12 +441,13 @@
                 },
                 event_info: {
                     page_key: UBA_PAGE_KEY,
-                    module_key: UBA_PAGE_MODULE,
-                    action: "PAGE_VIEW",
+                    module_key: moduleKey,
+                    action: action,
                     event_seq: ubaState.eventSeq,
                     event_time: Date.now(),
                     event_id: ubaUuid(),
-                    url: window.location.href
+                    url: window.location.href,
+                    attrs: attrs || {}
                 }
             };
             fetch(UBA_ENDPOINT, {
@@ -408,6 +463,24 @@
             }).catch(() => {});
         }
 
+        function sendUbaPageView() {
+            if (ubaState.pageViewSent) {
+                return;
+            }
+            ubaState.pageViewSent = true;
+            ubaState.pageViewAt = Date.now();
+            sendUbaEvent(UBA_PAGE_MODULE, "PAGE_VIEW");
+        }
+
+        function sendUbaPageEnd() {
+            if (!ubaState.pageViewSent || !ubaState.pageViewAt) {
+                return;
+            }
+            sendUbaEvent(UBA_PAGE_MODULE, "PAGE_END", {
+                duration: Math.max(0, Date.now() - ubaState.pageViewAt)
+            });
+        }
+
         const modal = document.getElementById("letter-modal");
         const letterImage = document.getElementById("letter-image");
         const closeButton = document.getElementById("letter-close");
@@ -415,18 +488,33 @@
         let lastTrigger = null;
 
         function openLetter(animal, trigger) {
+            const config = letterUbaConfig[animal];
+            if (config) {
+                sendUbaEvent(config.click, "CLICK");
+            }
             letterImage.src = letterImages[animal];
             letterImage.alt = `${animal} 写给你的来信`;
             modal.classList.add("open");
             document.body.classList.add("modal-open");
             lastTrigger = trigger;
+            ubaState.activeLetter = animal;
             closeButton.focus();
+            if (config) {
+                sendUbaEvent(config.impression, "IMPRESSION");
+            }
         }
 
-        function closeLetter() {
+        function closeLetter(fromCloseButton) {
+            if (fromCloseButton && ubaState.activeLetter) {
+                const config = letterUbaConfig[ubaState.activeLetter];
+                if (config) {
+                    sendUbaEvent(config.close, "CLICK");
+                }
+            }
             modal.classList.remove("open");
             document.body.classList.remove("modal-open");
             letterImage.removeAttribute("src");
+            ubaState.activeLetter = null;
             if (lastTrigger) {
                 lastTrigger.focus();
             }
@@ -436,15 +524,28 @@
             button.addEventListener("click", () => openLetter(button.dataset.letter, button));
         });
 
-        closeButton.addEventListener("click", closeLetter);
+        document.querySelectorAll("[data-uba-module]").forEach((element) => {
+            element.addEventListener("click", () => {
+                sendUbaEvent(element.dataset.ubaModule, element.dataset.ubaAction || "CLICK");
+            });
+        });
+
+        closeButton.addEventListener("click", () => closeLetter(true));
         modal.addEventListener("click", (event) => {
             if (event.target === modal) {
-                closeLetter();
+                closeLetter(false);
             }
         });
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape" && modal.classList.contains("open")) {
-                closeLetter();
+                closeLetter(false);
+            }
+        });
+
+        window.addEventListener("pagehide", sendUbaPageEnd);
+        document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "hidden") {
+                sendUbaPageEnd();
             }
         });
 
