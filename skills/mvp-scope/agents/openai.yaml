@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVP范围定义"
+  short_description: "界定MVP范围、学习目标与验证路径的快速方法（创新早期）"
+  default_prompt: "使用 $mvp-scope 定义MVP范围、假设与验证计划。"

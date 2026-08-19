@@ -1,0 +1,4 @@
+interface:
+  display_name: "竞争与替代分析"
+  short_description: "用五力与替代视角梳理竞争格局与差异化空间"
+  default_prompt: "使用 $competitive-alternatives 产出竞争/替代分析与策略假设。"

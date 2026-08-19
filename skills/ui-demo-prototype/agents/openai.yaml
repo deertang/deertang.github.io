@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品UI与演示Demo"
+  short_description: "基于可用性启发式与平台规范产出Demo脚本"
+  default_prompt: "使用 $ui-demo-prototype 做UI评审并输出Demo脚本。"

@@ -1,0 +1,68 @@
+{
+  "appId": 270,
+  "pageInstance": "cha_bai_dao_tinytype_collab_activity",
+  "pageViewPointId": 117430,
+  "pageEndPointId": 117431,
+  "trackingStartDate": "2026-08-19",
+  "pageUrl": "https://tinytypezoo.com/sms/",
+  "mainDashboardUrl": "https://tinytype-dashboard.devops.sit.xiaohongshu.com/dashboard",
+  "metaLinks": {
+    "pageDetail": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-detail?appId=270&pageInstance=cha_bai_dao_tinytype_collab_activity&pvPointId=117430&pePointId=117431",
+    "pageOverview": "https://meta.devops.xiaohongshu.com/dashboard/board/business/page-overview?appId=270&applicationType=1&pageInstance=cha_bai_dao_tinytype_collab_activity&url=https%3A%2F%2Ftinytypezoo.com%2Fsms%2F&pvPointId=117430&pePointId=117431"
+  },
+  "groups": [
+    {
+      "name": "页面",
+      "points": [
+        { "pointId": 117430, "label": "页面访问 (UV/PV)", "action": "PAGE_VIEW", "module": "cha_bai_dao_tinytype_collab_activity_page" },
+        { "pointId": 117431, "label": "页面离开", "action": "PAGE_END", "module": "cha_bai_dao_tinytype_collab_activity_page" }
+      ]
+    },
+    {
+      "name": "主操作",
+      "points": [
+        { "pointId": 117436, "label": "关注", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_follow_btn" },
+        { "pointId": 117438, "label": "奶茶福利券", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_milk_tea_benefit_btn" },
+        { "pointId": 117433, "label": "iOS 下载", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_ios_download_btn" },
+        { "pointId": 117432, "label": "Android 下载", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_android_download_btn" }
+      ]
+    },
+    {
+      "name": "收信",
+      "points": [
+        { "pointId": 117437, "label": "收茶茶的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_chacha_letter" },
+        { "pointId": 117439, "label": "收 Tsuki 的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_tsuki_letter" },
+        { "pointId": 117440, "label": "收亮亮的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_liangliang_letter" },
+        { "pointId": 117441, "label": "收迈尔斯的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_miles_letter" },
+        { "pointId": 117442, "label": "收路易的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_louis_letter" },
+        { "pointId": 117443, "label": "收老师傅的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_master_letter" },
+        { "pointId": 117444, "label": "收拉尔夫的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_ralph_letter" },
+        { "pointId": 117435, "label": "收主任的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_director_letter" },
+        { "pointId": 117434, "label": "收 kaka 的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_receive_kaka_letter" }
+      ]
+    },
+    {
+      "name": "信件弹层",
+      "points": [
+        { "pointId": 117463, "label": "茶茶的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_chacha_letter" },
+        { "pointId": 117464, "label": "关闭茶茶的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_chacha_letter_close_btn" },
+        { "pointId": 117479, "label": "Tsuki 的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_tsuki_letter" },
+        { "pointId": 117480, "label": "关闭 Tsuki 的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_tsuki_letter_close_btn" },
+        { "pointId": 117469, "label": "亮亮的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_liangliang_letter" },
+        { "pointId": 117470, "label": "关闭亮亮的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_liangliang_letter_close_btn" },
+        { "pointId": 117473, "label": "迈尔斯的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_miles_letter" },
+        { "pointId": 117474, "label": "关闭迈尔斯的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_miles_letter_close_btn" },
+        { "pointId": 117471, "label": "路易的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_louis_letter" },
+        { "pointId": 117472, "label": "关闭路易的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_louis_letter_close_btn" },
+        { "pointId": 117467, "label": "老师傅的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_master_letter" },
+        { "pointId": 117468, "label": "关闭老师傅的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_master_letter_close_btn" },
+        { "pointId": 117465, "label": "拉尔夫的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_ralph_letter" },
+        { "pointId": 117466, "label": "关闭拉尔夫的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_ralph_letter_close_btn" },
+        { "pointId": 117475, "label": "主任的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_director_letter" },
+        { "pointId": 117476, "label": "关闭主任的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_director_letter_close_btn" },
+        { "pointId": 117477, "label": "kaka 的信展示", "action": "IMPRESSION", "module": "cha_bai_dao_tinytype_collab_activity_kaka_letter" },
+        { "pointId": 117478, "label": "关闭 kaka 的信", "action": "CLICK", "module": "cha_bai_dao_tinytype_collab_activity_kaka_letter_close_btn" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶百道活动 · 数据看板</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --surface: #ffffff;
+            --ink: #1f2937;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --accent: #2563eb;
+            --accent-soft: #eff6ff;
+            --success: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            background: var(--bg);
+        }
+
+        .topbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .topbar-inner {
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 56px;
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ink);
+            white-space: nowrap;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+
+        .tab:hover {
+            background: var(--bg);
+            color: var(--ink);
+        }
+
+        .tab.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .page {
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 24px 0 40px;
+        }
+
+        .hero {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .hero a {
+            color: var(--accent);
+        }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: end;
+            margin: 20px 0 16px;
+        }
+
+        label {
+            display: grid;
+            gap: 4px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        input[type="date"] {
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font: inherit;
+            font-size: 14px;
+            min-width: 150px;
+        }
+
+        button,
+        .link-btn {
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button.primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        button.primary:hover {
+            background: #1d4ed8;
+        }
+
+        .link-btn {
+            background: var(--surface);
+            color: var(--ink);
+            text-decoration: none;
+            border: 1px solid var(--line);
+        }
+
+        .link-btn:hover {
+            border-color: #cbd5e1;
+        }
+
+        .notice {
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            color: #92400e;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .notice.warn {
+            background: #fef2f2;
+            border-color: #fecaca;
+            color: #991b1b;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .metric {
+            padding: 16px;
+            border-radius: 10px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+        }
+
+        .metric span {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .metric strong {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .metric strong.small {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .panel-head {
+            padding: 14px 16px 10px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .panel-head h2 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .panel-head p {
+            margin: 4px 0 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 10px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+        }
+
+        th {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 500;
+            background: #fafafa;
+        }
+
+        td.num {
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+
+        .empty {
+            padding: 24px 16px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .status {
+            min-height: 18px;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .status.error {
+            color: #dc2626;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 4px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: var(--bg);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .summary,
+            .panels {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand">Tinytype 数据看板</div>
+            <nav class="tabs" aria-label="看板导航">
+                <a class="tab" id="tab-overview" href="https://tinytype-dashboard.devops.sit.xiaohongshu.com/dashboard">总览</a>
+                <a class="tab active" id="tab-chabaodao" href="/" aria-current="page">茶百道活动</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page">
+        <header class="hero">
+            <h1>茶百道活动 · 小动物邮局</h1>
+            <p>落地页 <a href="https://tinytypezoo.com/sms/" target="_blank" rel="noreferrer">tinytypezoo.com/sms/</a> · UBA appId 270 · 点位 117430</p>
+        </header>
+
+        <div class="toolbar">
+            <label>开始日期
+                <input id="start-date" type="date">
+            </label>
+            <label>结束日期
+                <input id="end-date" type="date">
+            </label>
+            <button class="primary" id="refresh-btn" type="button">刷新数据</button>
+            <a class="link-btn" id="meta-link" target="_blank" rel="noreferrer">UBA 官方看板</a>
+        </div>
+
+        <div class="notice" id="notice"></div>
+        <div class="status" id="status"></div>
+
+        <section class="summary">
+            <article class="metric">
+                <span>区间 UV</span>
+                <strong id="summary-uv">--</strong>
+            </article>
+            <article class="metric">
+                <span>区间 PV</span>
+                <strong id="summary-pv">--</strong>
+            </article>
+            <article class="metric">
+                <span>统计起点</span>
+                <strong id="summary-start" class="small">--</strong>
+            </article>
+        </section>
+
+        <section class="panels">
+            <article class="panel">
+                <div class="panel-head">
+                    <h2>每日 UV / PV</h2>
+                    <p>PAGE_VIEW 点位 117430</p>
+                </div>
+                <div id="daily-wrap"></div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <h2>按钮与模块点击</h2>
+                    <p>CLICK / IMPRESSION 各点位 UV、PV</p>
+                </div>
+                <div id="click-wrap"></div>
+            </article>
+        </section>
+    </div>
+
+    <script>
+        const MAIN_DASHBOARD_URL = "https://tinytype-dashboard.devops.sit.xiaohongshu.com/dashboard";
+        const startInput = document.getElementById("start-date");
+        const endInput = document.getElementById("end-date");
+        const statusEl = document.getElementById("status");
+        const noticeEl = document.getElementById("notice");
+        const metaLink = document.getElementById("meta-link");
+        const tabOverview = document.getElementById("tab-overview");
+
+        tabOverview.href = MAIN_DASHBOARD_URL;
+
+        function formatNumber(value) {
+            if (value === null || value === undefined || Number.isNaN(Number(value))) {
+                return "--";
+            }
+            return Number(value).toLocaleString("zh-CN");
+        }
+
+        function localDateString(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, "0");
+            const day = String(date.getDate()).padStart(2, "0");
+            return `${year}-${month}-${day}`;
+        }
+
+        function defaultDates(trackingStart) {
+            const end = new Date();
+            const start = new Date(end);
+            start.setDate(end.getDate() - 6);
+            const tracking = new Date(`${trackingStart}T00:00:00`);
+            if (start < tracking) {
+                start.setTime(tracking.getTime());
+            }
+            startInput.value = localDateString(start);
+            endInput.value = localDateString(end);
+        }
+
+        function renderDaily(rows) {
+            const wrap = document.getElementById("daily-wrap");
+            if (!rows.length) {
+                wrap.innerHTML = '<div class="empty">暂无数据</div>';
+                return;
+            }
+            wrap.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th style="text-align:right">UV</th>
+                            <th style="text-align:right">PV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${rows.map((row) => `
+                            <tr>
+                                <td>${row.date}</td>
+                                <td class="num">${formatNumber(row.uv)}</td>
+                                <td class="num">${formatNumber(row.pv)}</td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function renderClicks(items, warning) {
+            const wrap = document.getElementById("click-wrap");
+            if (!items.length) {
+                wrap.innerHTML = '<div class="empty">暂无数据</div>';
+                return;
+            }
+            const warningHtml = warning
+                ? `<div class="notice warn">${warning}</div>`
+                : "";
+            wrap.innerHTML = `
+                ${warningHtml}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模块</th>
+                            <th>类型</th>
+                            <th>状态</th>
+                            <th style="text-align:right">UV</th>
+                            <th style="text-align:right">PV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${items.map((item) => `
+                            <tr>
+                                <td>${item.label}<div class="tag">${item.group}</div></td>
+                                <td>${item.action}</td>
+                                <td>${item.published ? "已上线" : "未上线"}</td>
+                                <td class="num">${formatNumber(item.uv)}</td>
+                                <td class="num">${formatNumber(item.pv)}</td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        async function fetchJson(url) {
+            const response = await fetch(url);
+            const body = await response.json();
+            if (!response.ok) {
+                throw new Error(body.detail || "查询失败");
+            }
+            return body;
+        }
+
+        async function loadData() {
+            const start = startInput.value;
+            const end = endInput.value;
+            statusEl.textContent = "正在查询 UBA…";
+            statusEl.classList.remove("error");
+
+            let metricsLoaded = false;
+            let clicksLoaded = false;
+            const errors = [];
+
+            try {
+                const [metricsResult, clicksResult] = await Promise.allSettled([
+                    fetchJson(`/api/metrics?start=${start}&end=${end}`),
+                    fetchJson(`/api/clicks?start=${start}&end=${end}`),
+                ]);
+
+                if (metricsResult.status === "fulfilled") {
+                    const metrics = metricsResult.value;
+                    document.getElementById("summary-uv").textContent = formatNumber(metrics.summary.uv);
+                    document.getElementById("summary-pv").textContent = formatNumber(metrics.summary.pv);
+                    document.getElementById("summary-start").textContent = metrics.trackingStartDate;
+                    renderDaily(metrics.daily);
+                    metricsLoaded = true;
+                } else {
+                    errors.push(`UV/PV：${metricsResult.reason?.message || "查询失败"}`);
+                }
+
+                if (clicksResult.status === "fulfilled") {
+                    const clicks = clicksResult.value;
+                    noticeEl.textContent = clicks.warning
+                        ? "页面 UV/PV 正常。按钮点击需 UBA 点位上线后才会入库；下方表格展示各模块状态。"
+                        : "页面 UV/PV 与按钮点击均已查询。UBA 入库可能有分钟级延迟。";
+                    renderClicks(clicks.items, clicks.warning);
+                    clicksLoaded = true;
+                } else {
+                    errors.push(`按钮点击：${clicksResult.reason?.message || "查询失败"}`);
+                    renderClicks([], null);
+                }
+            } catch (error) {
+                errors.push(error.message || "查询失败");
+            }
+
+            if (metricsLoaded && clicksLoaded) {
+                statusEl.textContent = `已更新：${start} 至 ${end}`;
+            } else if (errors.length) {
+                statusEl.textContent = errors.join("；") || "查询失败";
+                statusEl.classList.add("error");
+            }
+        }
+
+        async function bootstrap() {
+            const config = await fetch("/api/config").then((res) => res.json());
+            if (config.mainDashboardUrl) {
+                tabOverview.href = config.mainDashboardUrl;
+            }
+            metaLink.href = config.metaLinks.pageDetail;
+            defaultDates(config.trackingStartDate);
+            document.getElementById("refresh-btn").addEventListener("click", loadData);
+            await loadData();
+        }
+
+        bootstrap();
+    </script>
+</body>
+</html>
