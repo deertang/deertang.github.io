@@ -424,8 +424,21 @@
             }
         };
 
-        function sendUbaEvent(moduleKey, action, attrs) {
+        function sendUbaEvent(moduleKey, action, attributes) {
             ubaState.eventSeq += 1;
+            const eventInfo = {
+                page_key: UBA_PAGE_KEY,
+                module_key: moduleKey,
+                action: action,
+                event_key: `${moduleKey}_${action}`,
+                event_seq: ubaState.eventSeq,
+                event_time: Date.now(),
+                event_id: ubaUuid(),
+                url: window.location.href
+            };
+            if (attributes && Object.keys(attributes).length) {
+                eventInfo.attributes = attributes;
+            }
             const payload = {
                 context: {
                     app_id: UBA_APP_ID,
@@ -439,18 +452,9 @@
                     container_artifact_name: "",
                     container_artifact_version: ""
                 },
-                event_info: {
-                    page_key: UBA_PAGE_KEY,
-                    module_key: moduleKey,
-                    action: action,
-                    event_seq: ubaState.eventSeq,
-                    event_time: Date.now(),
-                    event_id: ubaUuid(),
-                    url: window.location.href,
-                    attrs: attrs || {}
-                }
+                event_info: eventInfo
             };
-            fetch(UBA_ENDPOINT, {
+            return fetch(UBA_ENDPOINT, {
                 method: "POST",
                 headers: {
                     accept: "application/json, text/plain, */*",
@@ -525,7 +529,21 @@
         });
 
         document.querySelectorAll("[data-uba-module]").forEach((element) => {
-            element.addEventListener("click", () => {
+            element.addEventListener("click", (event) => {
+                const href = element.getAttribute("href");
+                const isExternalLink = element.tagName === "A" && href && href !== "#";
+                if (isExternalLink) {
+                    event.preventDefault();
+                    const navigate = () => {
+                        window.location.href = href;
+                    };
+                    const timer = window.setTimeout(navigate, 400);
+                    Promise.resolve(sendUbaEvent(element.dataset.ubaModule, element.dataset.ubaAction || "CLICK")).finally(() => {
+                        window.clearTimeout(timer);
+                        navigate();
+                    });
+                    return;
+                }
                 sendUbaEvent(element.dataset.ubaModule, element.dataset.ubaAction || "CLICK");
             });
         });
