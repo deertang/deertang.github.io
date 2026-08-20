@@ -60,7 +60,7 @@
             display: block;
             width: 100%;
             height: auto;
-            aspect-ratio: 1125 / 13131;
+            aspect-ratio: 1125 / 13370;
             object-fit: contain;
         }
 
@@ -81,14 +81,14 @@
 
         .follow-hotspot {
             left: 25.3333%;
-            top: 9.7479%;
+            top: 9.5737%;
             width: 49.3333%;
-            height: 1.6754%;
+            height: 1.6455%;
         }
 
         .letter-hotspot {
             width: 28.8889%;
-            height: 1.2108%;
+            height: 1.1892%;
         }
 
         .letter-hotspot.left {
@@ -100,72 +100,48 @@
         }
 
         .letter-hotspot.row-1 {
-            top: 26.2204%;
+            top: 25.7517%;
         }
 
         .letter-hotspot.row-2 {
-            top: 29.7008%;
+            top: 29.1698%;
         }
 
         .letter-hotspot.row-3 {
-            top: 33.1812%;
+            top: 32.5879%;
         }
 
         .letter-hotspot.row-4 {
-            top: 36.7605%;
+            top: 36.1032%;
         }
 
         .letter-hotspot.chacha {
             left: 35.5556%;
-            top: 20.8514%;
+            top: 20.4787%;
             width: 28.8889%;
-            height: 1.2108%;
+            height: 1.1892%;
         }
 
         .coupon-hotspot {
             left: 19.5556%;
-            top: 22.0947%;
+            top: 21.70%;
             width: 60.4444%;
-            height: 1.3746%;
+            height: 1.35%;
             border-radius: 999px;
         }
 
-        .download-float {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            z-index: 40;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            transform: translateY(-50%);
-            pointer-events: none;
+        .download-hotspot {
+            top: 41.2191%;
+            width: 39.7333%;
+            height: 1.2191%;
         }
 
-        .download-float-btn {
-            display: block;
-            width: clamp(36px, 11.9vw, 48px);
-            line-height: 0;
-            pointer-events: auto;
-            -webkit-tap-highlight-color: transparent;
-            transition: transform 0.18s ease;
+        .download-hotspot.ios {
+            left: 8.5333%;
         }
 
-        .download-float-btn img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .download-float-btn:focus-visible {
-            outline: 3px solid #ff6a3d;
-            outline-offset: 2px;
-        }
-
-        @media (hover: hover) and (pointer: fine) {
-            .download-float-btn:hover {
-                transform: translateX(-2px);
-            }
+        .download-hotspot.android {
+            left: 51.7333%;
         }
 
         .letter-modal {
@@ -277,13 +253,13 @@
         <picture>
             <source
                 type="image/webp"
-                srcset="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%90%BD%E5%9C%B0%E9%A1%B52.webp"
+                srcset="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%90%BD%E5%9C%B0%E9%A1%B51.webp"
             >
             <img
                 class="landing-image"
-                src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%90%BD%E5%9C%B0%E9%A1%B52.jpg"
+                src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5_%E8%90%BD%E5%9C%B0%E9%A1%B51.jpg"
                 width="1125"
-                height="13131"
+                height="13370"
                 alt="欢迎来到小动物邮局：和温暖的小动物一起记录生活，100万+人都在用的可爱记录 App"
                 decoding="async"
                 fetchpriority="high"
@@ -312,40 +288,21 @@
         <button class="hotspot letter-hotspot right row-3" type="button" data-letter="拉尔夫" aria-label="打开拉尔夫的来信"></button>
         <button class="hotspot letter-hotspot left row-4" type="button" data-letter="主任" aria-label="打开主任的来信"></button>
         <button class="hotspot letter-hotspot right row-4" type="button" data-letter="kaka" aria-label="打开 kaka 的来信"></button>
-    </main>
-
-    <nav class="download-float" aria-label="应用下载">
         <a
-            class="download-float-btn"
+            class="hotspot download-hotspot ios"
             href="https://apps.apple.com/cn/app/%E6%8E%92%E7%89%88%E5%B0%8F%E5%8A%A8%E7%89%A9-tinytype-%E4%BD%A0%E7%9A%84%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88%E5%8A%A9%E6%89%8B/id6749688592"
             aria-label="前往 App Store 下载排版小动物"
             data-uba-module="cha_bai_dao_tinytype_collab_activity_ios_download_btn"
             data-uba-action="CLICK"
-        >
-            <img
-                src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5-18.png"
-                width="134"
-                height="275"
-                alt=""
-                decoding="async"
-            >
-        </a>
+        ></a>
         <a
-            class="download-float-btn"
+            class="hotspot download-hotspot android"
             href="https://sj.qq.com/appdetail/com.tiny.type"
             aria-label="下载 Android 版排版小动物"
             data-uba-module="cha_bai_dao_tinytype_collab_activity_android_download_btn"
             data-uba-action="CLICK"
-        >
-            <img
-                src="/assets/sms/%E8%90%BD%E5%9C%B0%E9%A1%B5-19.png"
-                width="134"
-                height="275"
-                alt=""
-                decoding="async"
-            >
-        </a>
-    </nav>
+        ></a>
+    </main>
 
     <div class="letter-modal" id="letter-modal" role="dialog" aria-modal="true" aria-label="小动物的来信">
         <div class="letter-dialog">
