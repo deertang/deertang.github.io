@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版小动物个人信息收集清单</title>
+    <meta property="og:title" content="排版小动物个人信息收集清单" />
+    <meta property="og:description" content="一群温暖的陪你记录生活的小动物" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tinytypezoo.com/personal-information-list.html" />
+    <meta property="og:image" content="https://tinytypezoo.com/1024.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="排版小动物个人信息收集清单" />
+    <meta name="twitter:description" content="一群温暖的陪你记录生活的小动物" />
+    <meta name="twitter:image" content="https://tinytypezoo.com/1024.png" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <style>
+        /* 全局样式 from src/styles/global.css */
+        :root {
+          /* 颜色变量 */
+          --primary-color: #2563eb;
+          --primary-hover: #1d4ed8;
+          --text-primary: #1f2937;
+          --text-secondary: #374151;
+          --bg-primary: #ffffff;
+          --bg-secondary: #f9fafb;
+          --border-color: #e5e7eb;
+          
+          /* 间距变量 */
+          --spacing-xs: 0.5rem;
+          --spacing-sm: 1rem;
+          --spacing-md: 1.5rem;
+          --spacing-lg: 2rem;
+          --spacing-xl: 3rem;
+          
+          /* 字体大小 */
+          --font-xs: 0.75rem;
+          --font-sm: 0.875rem;
+          --font-base: 1rem;
+          --font-lg: 1.125rem;
+          --font-xl: 1.25rem;
+          --font-2xl: 1.5rem;
+          --font-3xl: 1.875rem;
+          
+          /* 圆角 */
+          --radius-sm: 0.375rem;
+          --radius-md: 0.5rem;
+          --radius-lg: 0.75rem;
+          
+          /* 阴影 */
+          --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 暗色模式 */
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --border-color: #374151;
+          }
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html {
+          font-size: 16px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+          color: var(--text-primary);
+          background-color: var(--bg-primary);
+          line-height: 1.6;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+          .container {
+            padding: 0 var(--spacing-sm);
+          }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 600;
+          line-height: 1.4;
+          margin-bottom: var(--spacing-sm);
+        }
+
+        h1 { font-size: var(--font-3xl); }
+        h2 { font-size: var(--font-2xl); }
+        h3 { font-size: var(--font-xl); }
+        p {
+          margin-bottom: var(--spacing-md);
+          color: var(--text-secondary);
+        }
+        a {
+          color: var(--primary-color);
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+        a:hover { color: var(--primary-hover); }
+
+        /* 页面样式 from src/pages/PolicyPage.css */
+        .policy-page {
+          min-height: calc(100vh - 200px);
+        }
+        .policy-content {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: var(--spacing-lg) 0;
+        }
+        .policy-title {
+          text-align: center;
+          margin-bottom: var(--spacing-lg);
+          color: var(--text-primary);
+          font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+        .policy-meta {
+          text-align: center;
+          margin-bottom: var(--spacing-xl);
+          padding-bottom: var(--spacing-lg);
+          border-bottom: 1px solid var(--border-color);
+        }
+        .policy-meta p {
+          margin-bottom: var(--spacing-xs);
+          color: var(--text-secondary);
+          font-size: var(--font-sm);
+        }
+        .policy-section {
+          margin-bottom: var(--spacing-xl);
+        }
+        .policy-section h2 {
+          color: var(--text-primary);
+          margin-bottom: var(--spacing-md);
+          margin-top: var(--spacing-xl);
+          font-size: var(--font-2xl);
+        }
+        .policy-section h3 {
+          color: var(--text-primary);
+          margin-bottom: var(--spacing-sm);
+          margin-top: var(--spacing-lg);
+          font-size: var(--font-xl);
+        }
+        .policy-section p {
+          line-height: 1.8;
+          color: var(--text-secondary);
+        }
+        .policy-section ul,
+        .policy-section ol {
+          margin-left: var(--spacing-lg);
+          margin-bottom: var(--spacing-md);
+        }
+        .policy-section li {
+          margin-bottom: var(--spacing-sm);
+          line-height: 1.8;
+          color: var(--text-secondary);
+        }
+        .policy-section li strong {
+          color: var(--text-primary);
+        }
+        /* 二级列表样式 - 使用 a. b. c. */
+        .policy-section ol ol {
+          list-style-type: lower-alpha;
+          margin-top: var(--spacing-sm);
+        }
+        /* h3 标题后的列表也使用 a. b. c. */
+        .policy-section h3 ~ ol {
+          list-style-type: lower-alpha;
+        }
+        /* 三级列表样式 - 使用 i. ii. iii. */
+        .policy-section ol ol ol {
+          list-style-type: lower-roman;
+        }
+        .policy-section .highlight {
+          background-color: rgba(37, 99, 235, 0.1);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          border-left: 4px solid var(--primary-color);
+          margin: var(--spacing-md) 0;
+          font-weight: 500;
+          color: var(--text-primary);
+        }
+        .policy-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: var(--spacing-md) 0;
+          overflow-x: auto;
+          display: block;
+        }
+        .policy-table table {
+          width: 100%;
+          min-width: 600px;
+        }
+        .policy-table th,
+        .policy-table td {
+          padding: var(--spacing-sm);
+          text-align: left;
+          border: 1px solid var(--border-color);
+        }
+        .policy-table th {
+          background-color: var(--bg-secondary);
+          font-weight: 600;
+          color: var(--text-primary);
+        }
+        .policy-table td {
+          color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+          .policy-content {
+            padding: var(--spacing-md) 0;
+          }
+          .policy-title {
+            font-size: var(--font-xl);
+          }
+          .policy-section h2 {
+            font-size: var(--font-lg);
+          }
+          .policy-section h3 {
+            font-size: var(--font-base);
+          }
+          .policy-section ul,
+          .policy-section ol {
+            margin-left: var(--spacing-md);
+          }
+          .policy-table {
+            font-size: var(--font-sm);
+          }
+          .policy-table th,
+          .policy-table td {
+            padding: var(--spacing-xs);
+          }
+        }
+        @media (prefers-color-scheme: dark) {
+          .policy-section .highlight {
+            background-color: rgba(59, 130, 246, 0.1);
+          }
+        }
+
+
+        /* 目录 */
+        .toc {
+          background-color: var(--bg-secondary);
+          border-radius: var(--radius-lg);
+          padding: var(--spacing-lg);
+          margin: var(--spacing-xl) 0;
+        }
+        .toc h3 {
+          font-size: var(--font-lg);
+          margin-bottom: var(--spacing-md);
+          color: var(--text-primary);
+        }
+        .toc ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .toc ul li {
+          margin-bottom: var(--spacing-sm);
+        }
+        .toc ul li a {
+          color: var(--text-secondary);
+          font-size: var(--font-base);
+          display: block;
+          padding: var(--spacing-xs) 0;
+          transition: all 0.2s ease;
+        }
+        .toc ul li a:hover {
+          color: var(--primary-color);
+          padding-left: var(--spacing-xs);
+        }
+
+        @media (max-width: 768px) {
+          .toc {
+            padding: var(--spacing-md);
+          }
+        }
+    </style>
+<style>
+.policy-section a { color: #2563eb; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.policy-section strong { font-weight: 700; color: var(--text-primary); }
+.policy-table { display: block; max-width: 100%; overflow-x: auto; }
+.policy-table table { border-collapse: collapse; min-width: 680px; width: 100%; }
+.policy-table th, .policy-table td { vertical-align: top; min-width: 130px; overflow-wrap: anywhere; }
+.wide-table table { min-width: 1300px; }
+.wide-table td:nth-child(3) { min-width: 260px; }
+.policy-section { overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) { .policy-section a { color: #60a5fa; } }
+</style></head>
+<body><main class="policy-page"><div class="container"><article class="policy-content">
+<h1 class="policy-title">排版小动物个人信息收集清单</h1>
+<div class="policy-meta"><p><strong>更新日期：2026年10月27日</strong></p><p><strong>生效日期：2026年11月3日</strong></p></div>
+
+<section class="policy-section" id="intro">
+<div class="policy-table" role="region" aria-label="排版小动物个人信息收集清单表格" tabindex="0"><table><thead><tr><th scope="col"><strong>收集场景/功能</strong></th><th scope="col"><strong>收集目的</strong></th><th scope="col"><strong>个人信息类型</strong></th></tr></thead><tbody><tr><td>排版服务</td><td>提供照片导入、编辑、排版功能</td><td>使用本产品过程中输入的内容、主动上传的图片信息、生成的排版卡片和使用记录信息</td></tr><tr><td>打卡功能</td><td>提供习惯打卡服务</td><td>主动填写的习惯打卡等内容</td></tr><tr><td>添加笔友功能</td><td>用户邀请笔友、添加笔友</td><td>主动上传的笔友二维码图片、保存的用户二维码图片、分享与被分享的邀请链接</td></tr><tr><td>笔友与寄信功能</td><td>提供笔友通信交流服务</td><td>昵称、头像、生日（可选）、加入本平台的时长、往来邮件数、成为笔友天数和最近来信天数、信件及相关过程中形成的信息</td></tr><tr><td>分享功能</td><td>提供分享功能</td><td>生成的排版卡片、用户二维码图片</td></tr><tr><td>统计与性能监控服务</td><td>保障应用稳定运行、进行故障诊断和产品使用分析</td><td><strong>设备信息： 硬件型号、操作系统名称及版本号、唯一设备标识符（如 Android ID/IDFA/IDFV/OAID）、IP地址</strong>；软件与网络信息： 软件版本号、网络接入方式（如4G/5G/Wi-Fi）、网络类型、网络状态、网络质量数据（如延迟、丢包率）；操作日志（基本的操作日志、使用日志、服务日志）；为了预防恶意程序、保障服务安全、进行必要的运营分析以提升产品质量，我们可能会收集您的应用信息（ 安装的应用列表信息（仅限应用包名、版本号等基础元数据，非应用内具体内容）、正在运行的进程信息（用于识别恶意行为））、应用性能数据： 应用程序的总体运行状态、使用情况与频率、应用崩溃报告（包含崩溃时的堆栈信息，有助于定位问题）、总体安装使用情况、性能数据（如启动时间、响应速度）。应用来源： 应用的下载渠道信息（用于分析分发效果）</td></tr></tbody></table></div>
+</section>
+</article></div></main></body></html>
