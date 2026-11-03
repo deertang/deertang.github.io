@@ -1,0 +1,865 @@
+[
+  {
+    "id": "app-recommendation",
+    "title": "纯 App 安利类",
+    "group": "硬广口播",
+    "icon": "📱",
+    "audience": "App 安利、科技与记录工具类创作者；想降低记录门槛、找到喜欢的记录方式的人。",
+    "problem": "围绕一个具体需求讲清产品：让记录更省心、让独处时的感受有处安放，也让每天回来记录多一点期待。",
+    "sourceCategory": "纯 App 安利类",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 0,
+    "topics": [
+      {
+        "id": "efficient",
+        "title": "高效记录：把一个具体麻烦讲清楚",
+        "angle": "排版美感 · 轻量电子手帐",
+        "hook": "以前想记一件小事，还要纠结怎么排版；现在选一个喜欢的模板，就能把这段话留下来。",
+        "keywords": [
+          "排版手帐 App",
+          "文字卡片模板",
+          "电子日记"
+        ],
+        "structure": [
+          "先展示原来的记录方式，指出一个具体麻烦：零散、排版耗时或难以回看",
+          "前 25 秒内露出并点名排版小动物，直接推荐适合这个需求的功能",
+          "口播配合连续录屏：输入一段真实文字、选择模板、添加照片，完成卡片",
+          "打开日记本回看这条记录，说明它如何帮助自己整理生活片段",
+          "CTA：选一段现成的文字，试着完成自己的第一张记录卡片"
+        ],
+        "visual": "先给原始文字与成品卡片的对比，再演示完整记录过程。口播逐步说明每一步解决什么麻烦。",
+        "featured": true,
+        "focusTitle": "高效记录",
+        "sourceSection": "补充笔记",
+        "productFocus": "从记录分散、排版费时等真实麻烦中选一个，演示输入文字、选择模板、添加照片，再通过日记本回看。",
+        "cases": [
+          {
+            "id": "68b2d2fb000000001d03b54e",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "好用到哇塞！很多人不知道但巨实用的app",
+            "cover": "./assets/cases/68b2d2fb000000001d03b54e.webp",
+            "url": "https://www.xiaohongshu.com/explore/68b2d2fb000000001d03b54e?xsec_token=CB9ya8g-1KS3W8YxPdepTCqnOIEt54uOBsbM7-4s5-kRo=&xsec_source=app_share",
+            "takeaway": "参考实用 App 安利的直接推荐与场景表达。",
+            "source": "补充案例 · 高效记录"
+          },
+          {
+            "id": "6a8ea1ef000000002501ba8a",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "信息太分散的人，真的需要All in one笔记库",
+            "cover": "./assets/cases/6a8ea1ef000000002501ba8a.webp",
+            "url": "https://www.xiaohongshu.com/explore/6a8ea1ef000000002501ba8a?xsec_token=CB8Ao8DVhN2-Xb0IBNCN66jR3A5gU3TUsh5Vjo0u43Das=&xsec_source=app_share",
+            "takeaway": "参考从“信息零散”这个具体麻烦引出记录工具的结构。",
+            "source": "补充案例 · 高效记录"
+          },
+          {
+            "id": "696a0976000000002200810e",
+            "label": "参考 3",
+            "category": "选题参考",
+            "title": "🇲🇾马大学姐教你这样听课效率翻倍！",
+            "cover": "./assets/cases/696a0976000000002200810e.webp",
+            "url": "https://www.xiaohongshu.com/explore/696a0976000000002200810e?xsec_token=CBbpJ0pe0A27T-mJp5D7Ww6X_YF5dtA97z-8k0wK2RLPU=&xsec_source=app_share",
+            "takeaway": "参考“原来的记法—具体麻烦—工具解决”的口播结构。",
+            "source": "补充案例 · 高效记录"
+          }
+        ]
+      },
+      {
+        "id": "friendly-recording",
+        "featured": true,
+        "focusTitle": "女性友好／独处友好",
+        "sourceSection": "补充笔记",
+        "title": "女性友好／独处友好：给自己的感受留个位置",
+        "angle": "独处陪伴 · 情绪记录",
+        "hook": "一个人的时候，有些小事没想好要讲给谁听，我会先把它们记在这里。",
+        "keywords": [
+          "独处记录",
+          "心情日记",
+          "小动物陪伴"
+        ],
+        "productFocus": "围绕自己的独处体验，演示文字记录、心情标记与密码锁；展示实际收到的小动物来信，讲清这份陪伴感从哪里来。",
+        "structure": [
+          "从独处时想留住的一件小事开场，讲自己的真实记录需求",
+          "前 25 秒内露出排版小动物，直接说明推荐它的原因",
+          "重点口播并演示：写下感受、标记心情、选择喜欢的模板，再展示密码锁设置",
+          "结合日记回看与实际收到的小动物来信，分享个人体验；说明来信为不定期送达",
+          "CTA：给今天的自己留几句话，记录一个值得被记住的瞬间"
+        ],
+        "visual": "以独处时的真实生活片段作短开场，随后以口播和录屏为主，展示心情记录、密码锁与已收到的来信。",
+        "cases": [
+          {
+            "id": "690d9713000000000301c7ab",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "少有人记录我，所以我频繁记录生活。",
+            "cover": "./assets/cases/690d9713000000000301c7ab.webp",
+            "url": "https://www.xiaohongshu.com/explore/690d9713000000000301c7ab?xsec_token=CBiZr34d0x_7kQOazMvwYeT0bKToJ3eC_vUvnJlu2Q-uU=&xsec_source=app_share",
+            "takeaway": "参考从“为自己留下生活记录”切入的情绪表达。",
+            "source": "补充案例 · 女性友好／独处友好"
+          }
+        ]
+      },
+      {
+        "id": "gamified-recording",
+        "featured": true,
+        "focusTitle": "游戏化记录",
+        "sourceSection": "补充笔记",
+        "title": "游戏化记录：让每次回来都有一点期待",
+        "angle": "习惯养成 · 打卡与图鉴",
+        "hook": "如果记录总是坚持不下来，可以试着把每天记一句，变成一个能看见进度的小任务。",
+        "keywords": [
+          "游戏化记录",
+          "习惯养成",
+          "解锁图鉴"
+        ],
+        "productFocus": "把“每天记一句”设为养成任务，演示设置目标、提醒与每日打卡，再展示完成任务后逐步解锁的小动物图鉴。",
+        "structure": [
+          "从记录容易中断的具体经历开场，提出“给记录一点可见的反馈”",
+          "前 25 秒内露出排版小动物，明确推荐每日打卡与小动物图鉴",
+          "口播配合实机演示：自定义一个记录任务，选择 7 / 21 / 100 天目标并设置提醒",
+          "展示一次真实打卡、当前进度与已解锁的图鉴，再回看这段时间留下的记录",
+          "CTA：从“每天记一句”开始，给自己设一个能完成的小目标"
+        ],
+        "visual": "以任务进度和已解锁图鉴作短开场，连续展示设置任务、提醒、打卡和回看记录；完成状态按实际使用进度呈现。",
+        "cases": [
+          {
+            "id": "6961c5d20000000022009b8c",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "“拜喵神 不挂科”🤭",
+            "cover": "./assets/cases/6961c5d20000000022009b8c.webp",
+            "url": "https://www.xiaohongshu.com/explore/6961c5d20000000022009b8c?xsec_token=CB_WrZ0xkNzI0VheFr08--wijWSnJGIM4rXg_nTyQeEAg=&xsec_source=app_share",
+            "takeaway": "参考“边玩边学”的兴趣切入与工具安利方式。",
+            "source": "补充案例 · 游戏化记录"
+          },
+          {
+            "id": "69c270ec000000001e00d1d7",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "小众实用！像打游戏一样上瘾的专注学习app",
+            "cover": "./assets/cases/69c270ec000000001e00d1d7.webp",
+            "url": "https://www.xiaohongshu.com/explore/69c270ec000000001e00d1d7?xsec_token=CBUPn6oCc6XZVhht_-MnUR8VsgRRtqneoSoB7VsGN9fPA=&xsec_source=app_share",
+            "takeaway": "参考用游戏化体验与正反馈介绍习惯工具的方式。",
+            "source": "补充案例 · 游戏化记录"
+          }
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "699db9fd0000000026030f8f",
+        "label": "参考 1",
+        "category": "纯 App 安利类",
+        "title": "2026可以频繁的大量记录自己的小众APP💗",
+        "cover": "./assets/cases/699db9fd0000000026030f8f.webp",
+        "url": "https://www.xiaohongshu.com/explore/699db9fd0000000026030f8f?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 纯 App 安利类",
+        "takeaway": "参考口播安利产品的讲解方式。"
+      },
+      {
+        "id": "69d7204b000000002003a481",
+        "label": "参考 2",
+        "category": "纯 App 安利类",
+        "title": "3个保留生活质感的记录App 💗",
+        "cover": "./assets/cases/69d7204b000000002003a481.webp",
+        "url": "https://www.xiaohongshu.com/explore/69d7204b000000002003a481?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 纯 App 安利类",
+        "takeaway": "参考记录工具的价值介绍与使用场景。"
+      }
+    ],
+    "featuredIntro": "从高效记录、独处陪伴与游戏化体验切入。展开查看对应案例与口播提纲。"
+  },
+  {
+    "id": "opinion",
+    "title": "观点类",
+    "group": "硬广口播",
+    "icon": "💬",
+    "audience": "观点口播、女性成长与关系表达类创作者；从记录的意义、文字表达或个人经历切入。",
+    "problem": "先讲一个有共鸣的观点，再用功能与真实操作回答“如何做到”。可围绕坚持记录、漂亮分享、自我觉察，以及青春、友情和心事展开。",
+    "sourceCategory": "观点类",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 1,
+    "topics": [
+      {
+        "id": "meaning",
+        "title": "为什么人要坚持记录",
+        "angle": "情绪共鸣 · 日常小确幸",
+        "hook": "今天没发生什么大事，但我还是想把那块好吃的面包记下来。",
+        "keywords": [
+          "日常记录 App",
+          "情绪日记",
+          "生活小确幸"
+        ],
+        "structure": [
+          "从今天的一件小确幸开场，让观众知道“普通的一天也有可写的事”",
+          "前 25 秒内点名排版小动物，展示自己完成的一张记录卡片",
+          "重点口播讲解文字、多图与心情标记，实机完成一条日记",
+          "展示日记本回看；可结合实际收到的小动物来信，讲自己的记录感受",
+          "CTA：今天先记一件小事，评论交流你会选哪种小动物风格"
+        ],
+        "visual": "台灯下的书桌配一张当天照片，实录输入文字与标记心情。若已有小动物来信，可展示真实信件，说明是不定期来信。"
+      },
+      {
+        "id": "sharing",
+        "title": "碎碎念，也值得漂亮地分享",
+        "angle": "排版美感 · 文字表达",
+        "hook": "备忘录里那段舍不得删的话，我想给它一个好看的样子。",
+        "keywords": [
+          "碎碎念排版",
+          "好看的文字卡片",
+          "日常文案记录"
+        ],
+        "structure": [
+          "从一段舍不得删的碎碎念开场，讲为什么想把它整理出来",
+          "前 25 秒内展示排版小动物和完成的文字卡片",
+          "用同一段话演示模板切换，口播说明风格、配图与排版的选择",
+          "把完成卡片与原始文字并排展示，分享使用后的具体感受",
+          "CTA：把今天想说的话做成卡片，交流你更喜欢哪一种风格"
+        ],
+        "visual": "镜头先给一段真实文字，再切换到两种不同的小动物模板。封面用完成的卡片搭配手写标题，强调文字内容与排版效果。"
+      },
+      {
+        "id": "review",
+        "title": "回看这个月，才懂记录的意义",
+        "angle": "情绪共鸣 · 月度回看",
+        "hook": "翻回这个月的日记，我才发现，原来自己也过了这么多认真生活的日子。",
+        "keywords": [
+          "月度复盘",
+          "心情月历",
+          "日记回看"
+        ],
+        "structure": [
+          "展示一条过去的真实日记，讲回看时发现的具体变化",
+          "前 25 秒内说明自己用排版小动物记录，并露出日记本界面",
+          "重点介绍记录、日记本和月度回看，演示如何留下与找回生活片段",
+          "用一段真实经历解释回看如何帮助了解自己，不承诺心理或治疗效果",
+          "CTA：今天留下一句话，给下个月的自己回看"
+        ],
+        "visual": "用三条真实日记串起月初、月中与月末，录屏展示日记本翻阅和心情月历。口播围绕具体事件展开。"
+      },
+      {
+        "id": "youth",
+        "title": "青春不只剩考试，也值得被记录",
+        "angle": "情绪共鸣 · 青春记录",
+        "hook": "这学期除了分数，我还想记住放学路上的晚霞，和她递给我的那颗糖。",
+        "keywords": [
+          "校园日记",
+          "青春记录",
+          "学期回顾"
+        ],
+        "structure": [
+          "用一件校园小事开场，讲“这一学期除了考试，我还记得什么”",
+          "前 25 秒内展示排版小动物，明确推荐它记录青春日常",
+          "重点介绍并实机演示：写下当天几句话、选择模板、在日记本回看",
+          "用几段真实记录串起一次学期回顾，让功能与场景对应",
+          "CTA：今天记下一件与成绩无关、却不想忘记的小事"
+        ],
+        "visual": "用晚霞、课桌或合照作短开场，随后展示多图记录、文字模板和日记本。画面重点落在“怎么把这一天留下来”。",
+        "featured": true,
+        "focusTitle": "青春记录／学期总结",
+        "productFocus": "用文字与照片留住校园日常，再通过日记本回看一段青春。围绕一件不想忘记的小事，演示如何记录、如何回看。",
+        "sourceSection": "重点人群运营",
+        "cases": [
+          {
+            "id": "69ff05d2000000003502dd73",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "“当时只道是寻常”",
+            "cover": "./assets/cases/69ff05d2000000003502dd73.jpg",
+            "url": "https://www.xiaohongshu.com/explore/69ff05d2000000003502dd73?xsec_token=CBkEeasj4tzOkKNxPJJCkFJAfgd_LxIfJh69eXCJmP-7k=&xsec_source=app_share",
+            "takeaway": "参考寻常日常在回看时产生的情感落差。",
+            "source": "重点人群运营 · 青春记录／学期总结"
+          },
+          {
+            "id": "69fdd445000000001a02c6f0",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "“我们那一文不值但又如黄金般珍贵的青春”",
+            "cover": "./assets/cases/69fdd445000000001a02c6f0.jpg",
+            "url": "https://www.xiaohongshu.com/explore/69fdd445000000001a02c6f0?xsec_token=CBian0eDeBlTibX-Iz3V_czXX4Rz7njHSLu6rS_FchDpU=&xsec_source=app_share",
+            "takeaway": "参考青春价值的观点表达与共鸣。",
+            "source": "重点人群运营 · 青春记录／学期总结"
+          },
+          {
+            "id": "69a567c10000000015039d4b",
+            "label": "参考 3",
+            "category": "选题参考",
+            "title": "人生有意义的时刻应该被允许记录",
+            "cover": "./assets/cases/69a567c10000000015039d4b.jpg",
+            "url": "https://www.xiaohongshu.com/explore/69a567c10000000015039d4b?xsec_token=CBnFq96ZvKwdhlp1l9DxPdBai6MJxUWINpa6xa9pt1Qy0=&xsec_source=app_share",
+            "takeaway": "参考“有意义的时刻值得记录”的开场。",
+            "source": "重点人群运营 · 青春记录／学期总结"
+          },
+          {
+            "id": "6a6f028300000000290337f1",
+            "label": "参考 4",
+            "category": "选题参考",
+            "title": "高三再见，致我不一样的高中时代",
+            "cover": "./assets/cases/6a6f028300000000290337f1.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6a6f028300000000290337f1?xsec_token=CBBUN3E71UG0jvoh8fMBvcfKyEydFzecjNf_nYDrqQx7c=&xsec_source=app_share",
+            "takeaway": "参考用具体高中记忆串起阶段总结。",
+            "source": "重点人群运营 · 青春记录／学期总结"
+          }
+        ]
+      },
+      {
+        "id": "friendship",
+        "title": "给朋友写封信，留住共同的记忆",
+        "angle": "情绪共鸣 · 友情表达",
+        "hook": "有些一起经历的小事，我想认真写封信告诉她：我一直都记得。",
+        "keywords": [
+          "写给朋友的信",
+          "异地友情",
+          "双人回忆"
+        ],
+        "structure": [
+          "从一次共同回忆或想念朋友的瞬间切入",
+          "前 25 秒内露出排版小动物，说明可以用笔友功能给朋友写信",
+          "重点口播并演示添加笔友、写信与选择送达时间；说明信件最早 24 小时后送达",
+          "展示信箱回看，把操作与真实的友情表达对应起来",
+          "CTA：邀请一位朋友成为笔友，把一件共同记忆写成信寄给她"
+        ],
+        "visual": "从共同回忆的照片切到手机写信过程，展示添加笔友、选择送达时间和信箱回看。若展示对方信件，先取得同意并遮住个人信息。",
+        "featured": true,
+        "focusTitle": "朋友的共同记忆／友情维系",
+        "productFocus": "用笔友功能给朋友写一封信，保存共同经历与想认真说的话。演示添加笔友、写信和选择送达时间；信件最早 24 小时后送达。",
+        "sourceSection": "重点人群运营",
+        "cases": [
+          {
+            "id": "6a8e507e000000001f000c27",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "强推和好友一起玩的《双人采访》",
+            "cover": "./assets/cases/6a8e507e000000001f000c27.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6a8e507e000000001f000c27?xsec_token=CB8Ao8DVhN2-Xb0IBNCN66jSCUbkaJgbj7CO-0WGVEZO4=&xsec_source=app_share",
+            "takeaway": "参考与好友共同回忆、互相提问的表达。",
+            "source": "重点人群运营 · 朋友的共同记忆／友情维系"
+          },
+          {
+            "id": "68da99db0000000013005638",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "长久的友谊靠的是具体的行为",
+            "cover": "./assets/cases/68da99db0000000013005638.jpg",
+            "url": "https://www.xiaohongshu.com/explore/68da99db0000000013005638?xsec_token=CBl-PskzZtuwCksIW5DWfpg0RFFHMNpKLhINiQZnt7P1k=&xsec_source=app_share",
+            "takeaway": "从维系友谊的具体行动转入给朋友写信。",
+            "source": "重点人群运营 · 朋友的共同记忆／友情维系"
+          }
+        ]
+      },
+      {
+        "id": "love-diary",
+        "title": "没说出口的少女心事，也有地方安放",
+        "angle": "情绪共鸣 · 少女心事",
+        "hook": "有些话不想发朋友圈，我就写进只给自己看的日记里。",
+        "keywords": [
+          "私人日记 App",
+          "少女心事",
+          "独处记录"
+        ],
+        "structure": [
+          "从一句不想公开分享的话开场，点明私人记录的需求",
+          "前 25 秒内点名并展示排版小动物的记录界面",
+          "重点口播介绍文字记录、心情标记与密码锁，并演示具体操作",
+          "在日记本回看一条可公开的旧记录，讲自己当时和现在的感受",
+          "CTA：留下一句只给自己的话，今天就开始一条私人记录"
+        ],
+        "visual": "夜晚书桌或床头的短镜头后，实录写日记、标记心情、设置密码锁。采用可公开的内容示例，突出安静记录的感受。",
+        "featured": true,
+        "focusTitle": "少女心事／成长表达",
+        "productFocus": "用文字记录与心情标记安放没说出口的话，结合密码锁与日记本展示私人记录和回看过程。",
+        "sourceSection": "重点人群运营",
+        "cases": [
+          {
+            "id": "6acf360e000000001b01ef08",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "因为喜欢一个人，我变成了坏学生",
+            "cover": "./assets/cases/6acf360e000000001b01ef08.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6acf360e000000001b01ef08?xsec_token=CBjFVTbWepv-K77-WiPj2yoHA0cRvlvHOT40Z0fGemBTU=&xsec_source=app_share",
+            "takeaway": "参考从真实少女心事引出记录需求。",
+            "source": "重点人群运营 · 少女心事／成长表达"
+          },
+          {
+            "id": "6887875e000000001c0342ee",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "大一下总结|我只是生长，只是存在，只是感受",
+            "cover": "./assets/cases/6887875e000000001c0342ee.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6887875e000000001c0342ee?xsec_token=CBt8N1v8_-NPWGYF4iSGHHWp3TKAMDouAxgWhLEoIk4dE=&xsec_source=app_share",
+            "takeaway": "参考大学成长感受与阶段性自我表达。",
+            "source": "重点人群运营 · 少女心事／成长表达"
+          }
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "69b948800000000021012747",
+        "label": "参考 1",
+        "category": "观点类",
+        "title": "唯有文字能担当此任， 宣告生命曾经在场。",
+        "cover": "./assets/cases/69b948800000000021012747.webp",
+        "url": "https://www.xiaohongshu.com/explore/69b948800000000021012747?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 观点类",
+        "takeaway": "从文字的意义建立共鸣，再转入记录工具。"
+      },
+      {
+        "id": "6a54d9900000000011007f15",
+        "label": "参考 2",
+        "category": "观点类",
+        "title": "如何像作家一样记录自己？",
+        "cover": "./assets/cases/6a54d9900000000011007f15.webp",
+        "url": "https://www.xiaohongshu.com/explore/6a54d9900000000011007f15?xsec_token=ABd7BVxVMDMeC_nBoonyqvZ8SmAmwNCiUyowQeIrcsNaE=&xsec_source=pc_search&source=web_explore_feed",
+        "source": "核心策略表 · 人群／场景 · 观点类",
+        "takeaway": "参考如何把普通日常讲成值得记录的故事。"
+      },
+      {
+        "id": "6aabc0e50000000028028422",
+        "label": "参考 3",
+        "category": "观点类",
+        "title": "为什么博主的故事不会讲完？",
+        "cover": "./assets/cases/6aabc0e50000000028028422.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6aabc0e50000000028028422?xsec_token=CBUaV_H5f0wRje9qDOy1x0w0fvriBvwnnrAYvF7q1yhMY=&xsec_source=app_share",
+        "source": "核心策略表 · 人群／场景 · 观点类",
+        "takeaway": "参考持续积累生活素材的观点切入。"
+      }
+    ],
+    "featuredIntro": "面向女高、女大，从青春、友情与心事切入。展开查看各方向案例。"
+  },
+  {
+    "id": "learning-method",
+    "title": "学习方法类",
+    "group": "硬广口播",
+    "icon": "📚",
+    "audience": "学习方法、自我提升类创作者；重视轻量记录、知识梳理与长期积累的学生和记录者。",
+    "problem": "用产品落实一个具体方法：轻量记下想法、解释知识点、复盘错因，再演示下一次如何回看与使用。",
+    "sourceCategory": "学习方法类",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 2,
+    "topics": [
+      {
+        "id": "learning-method",
+        "title": "看懂却讲不清，试试输出式学习记录",
+        "angle": "学习复盘 · 输出式笔记",
+        "hook": "看懂答案不等于会做，我现在会多写一句：这道题到底卡在哪。",
+        "keywords": [
+          "学习复盘模板",
+          "输出式笔记",
+          "错题反思"
+        ],
+        "structure": [
+          "从一个具体学习痛点切入，如看懂了却讲不清",
+          "前 25 秒内露出排版小动物，介绍自己的输出式记录方法",
+          "重点口播并实机演示：写一个知识点、自己的解释和错因，再整理成卡片",
+          "回看一次之前的记录，说明下次遇到同类问题如何使用",
+          "CTA：用自己的话写清今天学会的一个知识点"
+        ],
+        "visual": "桌面拍一道题或一页笔记，手机上依次写“知识点、我的解释、错因”。完整展示一张卡片，并回看之前的同类记录。"
+      },
+      {
+        "id": "reading-talk",
+        "title": "读书不只摘抄，也留下自己的理解",
+        "angle": "学习复盘 · 读书笔记",
+        "hook": "这句话我以前也抄过，但今天多写了一句自己的理解，才觉得真正留下了它。",
+        "keywords": [
+          "输出型读书笔记",
+          "摘抄排版",
+          "阅读记录"
+        ],
+        "structure": [
+          "口播一句最近读到的话，讲一个与自己生活有关的理解",
+          "前 25 秒内露出排版小动物，推荐“一句摘抄＋一句自己的理解”的记录方式",
+          "重点介绍模板和文字记录，实机演示一条完整读书笔记",
+          "展示之后如何回看，让产品成为思考和积累的工具",
+          "CTA：选今天最打动你的一句话，再写一句自己的理解"
+        ],
+        "visual": "书页、手写摘抄与手机卡片同框。演示“一句摘抄＋一句理解＋一件联想到的小事”，让模板服务于内容。"
+      },
+      {
+        "id": "rest-talk",
+        "title": "休息时总内疚，先记下真实的一天",
+        "angle": "情绪共鸣 · 休息与成长",
+        "hook": "今天没有完成很多任务，但散了步、吃了顿喜欢的饭，也值得记下来。",
+        "keywords": [
+          "假期日记",
+          "生活复盘",
+          "记录小事"
+        ],
+        "structure": [
+          "从休息时觉得内疚的真实经历开场",
+          "前 25 秒内露出排版小动物，推荐记录具体小事的方法",
+          "重点介绍并演示记录、模板与日记本，写下今天的一件事和当时感受",
+          "回看几条生活片段，分享个人体验，不承诺记录能消除焦虑",
+          "CTA：给今天留一条记录，不只写学习任务"
+        ],
+        "visual": "用散步、吃饭或整理书桌的一个片段开场，随后实录写下事件、感受与心情标记。结尾回看已有记录，呈现学习之外的生活。",
+        "featured": true,
+        "focusTitle": "休息羞耻症／假期提升",
+        "productFocus": "把学习安排与休息片段一起记下来，用模板整理假期计划，再通过日记本回看真实的一天。",
+        "sourceSection": "重点人群运营",
+        "cases": [
+          {
+            "id": "6a60b5770000000013024b48",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "一休息就内疚，如何跳出紧绷的循环？",
+            "cover": "./assets/cases/6a60b5770000000013024b48.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6a60b5770000000013024b48?xsec_token=CBfh1ta0HP-6gUc8nAtweBiCUEjE1uxeXtgtfyl60yfRc=&xsec_source=app_share",
+            "takeaway": "参考“休息时内疚”的共鸣切入与个人经历表达。",
+            "source": "重点人群运营 · 休息羞耻症／假期提升"
+          },
+          {
+            "id": "6abe2aa40000000014001834",
+            "label": "参考 2",
+            "category": "选题参考",
+            "title": "不旅游如何幸福充实地度过十一假期",
+            "cover": "./assets/cases/6abe2aa40000000014001834.jpg",
+            "url": "https://www.xiaohongshu.com/explore/6abe2aa40000000014001834?xsec_token=ABAlBs5icyF5utz4J_7iL-L4Z-2hbioUZUzjIqHtw2RYw=&xsec_source=app_share",
+            "takeaway": "参考用具体安排回应假期充实感。",
+            "source": "重点人群运营 · 休息羞耻症／假期提升"
+          }
+        ]
+      },
+      {
+        "id": "reset-talk",
+        "title": "收假后，从一条小记录找回节奏",
+        "angle": "学习复盘 · 小目标与打卡",
+        "hook": "收假第一天，我先不给自己列十个计划，只把今天能做的一件事记下来。",
+        "keywords": [
+          "学习打卡",
+          "备考小目标",
+          "每日复盘"
+        ],
+        "structure": [
+          "从收假后计划太满的经历开场，提出“先完成一件事”",
+          "前 25 秒内露出排版小动物，说明自己如何记录学习目标",
+          "重点口播并演示自定义任务、提醒时间与每日打卡",
+          "用一条真实复盘展示完成情况与感受，回看几天的实际记录",
+          "CTA：选一个今天能完成的小目标，晚上回来记一句复盘"
+        ],
+        "visual": "书桌前口播，演示设置一个学习任务、提醒时间和实际完成后的打卡，再补一条复盘。可展示已解锁的图鉴，画面按实际进度拍摄。",
+        "featured": true,
+        "focusTitle": "收假后如何恢复状态",
+        "productFocus": "从一个能完成的小目标开始，演示任务提醒与打卡，再用一条复盘记录当天的完成情况与感受。",
+        "sourceSection": "重点人群运营",
+        "cases": [
+          {
+            "id": "699d80ed000000000e03d98d",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "4步重塑大脑🔥假期后光速恢复状态 巨有效",
+            "cover": "./assets/cases/699d80ed000000000e03d98d.jpg",
+            "url": "https://www.xiaohongshu.com/explore/699d80ed000000000e03d98d?xsec_token=CBLpaL-d8QKKzfZX4uFLIN09mZWrQG4qafZAikQmtD25A=&xsec_source=app_share",
+            "takeaway": "参考收假后恢复学习节奏的步骤式表达。",
+            "source": "重点人群运营 · 收假后如何恢复状态"
+          }
+        ]
+      },
+      {
+        "id": "exam-prep",
+        "title": "考研冲刺及考后，把复习过程记清楚",
+        "angle": "学习复盘 · 考前方法与考后回顾",
+        "featured": true,
+        "focusTitle": "考研冲刺及考后",
+        "sourceSection": "重点人群运营",
+        "hook": "越到考试前，我越想记清楚：今天卡在哪里，明天先解决哪一个问题。",
+        "productFocus": "把复习安排、错题原因与当天收获整理成文字卡片，考前回看重点，考后留下一次阶段复盘。",
+        "keywords": [
+          "考研冲刺",
+          "复习方法",
+          "考后复盘"
+        ],
+        "structure": [
+          "从考前复习没有头绪的具体经历开场，提出一个自己正在用的方法",
+          "前 25 秒内露出并点名排版小动物，说明如何用它记录复习过程",
+          "口播配合实机演示：写下今日重点、错题原因与下一步，选择模板整理成卡片",
+          "回看已有记录，讲清考前如何整理重点、考后如何复盘这段经历",
+          "CTA：记下今天解决的一个问题，再写一句下一步打算"
+        ],
+        "visual": "书桌前口播配合真实复习记录，连续展示输入文字、选模板与日记本回看。用同一条记录讲清方法，结尾留下考后复盘的画面。",
+        "cases": [
+          {
+            "id": "68354aa300000000210193d2",
+            "label": "参考 1",
+            "category": "选题参考",
+            "title": "考试复习不进去？6个抄近路的方法 ！！",
+            "cover": "./assets/cases/68354aa300000000210193d2.webp",
+            "url": "https://www.xiaohongshu.com/explore/68354aa300000000210193d2?xsec_token=CB6teP4MEF0vmZh4cLe6a01VXBAlxCVs1oj11wC4-jF0Q=&xsec_source=app_share",
+            "takeaway": "参考考前复习痛点的切入与分步骤讲解方法。",
+            "source": "重点人群运营 · 考研冲刺及考后"
+          }
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "6a043ff20000000036001d61",
+        "label": "参考 1",
+        "category": "学习方法类",
+        "title": "30岁前首要任务：认识自己。",
+        "cover": "./assets/cases/6a043ff20000000036001d61.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6a043ff20000000036001d61?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 学习方法类",
+        "takeaway": "参考自我认识与记录方法的讲解方式。"
+      },
+      {
+        "id": "6a4e07fa0000000008030446",
+        "label": "参考 2",
+        "category": "学习方法类",
+        "title": "单科市排前100｜语文高效学习tips :D",
+        "cover": "./assets/cases/6a4e07fa0000000008030446.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6a4e07fa0000000008030446?xsec_token=CBrJnBYXuqa-5ZLyzjE_l14_r18oF6lHe9WborEmvOB3M=&xsec_source=app_share",
+        "source": "核心策略表 · 人群／场景 · 学习方法类",
+        "takeaway": "参考从具体语文学科痛点引出学习方法。"
+      },
+      {
+        "id": "6a0bf1be0000000035033964",
+        "label": "参考 3",
+        "category": "学习方法类",
+        "title": "📝有效读书的习惯｜读前、读中、读后做什么？",
+        "cover": "./assets/cases/6a0bf1be0000000035033964.webp",
+        "url": "https://www.xiaohongshu.com/explore/6a0bf1be0000000035033964?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 学习方法类",
+        "takeaway": "参考读前、读中、读后如何组织学习记录。"
+      }
+    ],
+    "featuredIntro": "从假期安排、状态恢复与考研复盘切入。展开查看各方向案例。"
+  },
+  {
+    "id": "journal",
+    "title": "手帐博主",
+    "group": "手帐演示",
+    "icon": "✂️",
+    "audience": "喜欢视觉表达、拼贴与纸质记录的手帐创作者。",
+    "problem": "随手保存日常片段，方便补手帐；展示小动物、模板与文字卡片怎样融入手帐。",
+    "sourceCategory": "手帐博主",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 4,
+    "topics": [
+      {
+        "id": "journal-backfill",
+        "title": "补手帐时，不再想不起这一周",
+        "structure": [
+          "呈现补手帐场景：这一周发生了什么，却想不起来；前 25 秒内露出并点名排版小动物",
+          "展示平时如何用小动物随手记下当天片段",
+          "回看电子记录，再补写实体手帐",
+          "展示电子记录与纸质手帐对应的效果",
+          "CTA：今天先记一句，周末补手帐更有依据"
+        ]
+      },
+      {
+        "id": "journal-material",
+        "title": "让小动物走进你的手帐日常",
+        "structure": [
+          "展示本次手帐的主题与素材需求；前 25 秒内露出并点名排版小动物",
+          "实机展示小动物形象、复古手机模板与文字记录",
+          "展示如何把记录画面打印为素材（打印需自行完成）",
+          "拍摄剪贴、拼贴与完成后的手帐",
+          "CTA：选一个喜欢的小动物，为下一页手帐做素材"
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "6a55e476000000000f03299e",
+        "label": "参考 1",
+        "category": "手帐博主",
+        "title": "记性不好的人怎么做手帐",
+        "cover": "./assets/cases/6a55e476000000000f03299e.webp",
+        "url": "https://www.xiaohongshu.com/explore/6a55e476000000000f03299e?xsec_token=AB9CPDHlKFC0kdNfa0AEGVV_ktsW6YWfMzZ2jKY3S7i8M=&xsec_source=pc_share&source=webshare",
+        "source": "核心策略表 · 人群／场景 · 手帐博主",
+        "takeaway": "参考补手帐时回忆不完整的记录痛点。"
+      },
+      {
+        "id": "6a73099a0000000033010bd1",
+        "label": "参考 2",
+        "category": "手帐博主",
+        "title": "手帳er隨身事務所｜被小動物主編治癒的日常",
+        "cover": "./assets/cases/6a73099a0000000033010bd1.webp",
+        "url": "https://www.xiaohongshu.com/explore/6a73099a0000000033010bd1?xsec_token=CB_5DvaH2J8OXi5QJgF_3tBpAwezNnKbsNYXA9OuBKhm0=&xsec_source=pc_share&source=webshare",
+        "source": "核心策略表 · 人群／场景 · 手帐博主",
+        "takeaway": "参考把小动物与真实手帐日常结合。"
+      },
+      {
+        "id": "6a562edf000000001101490b",
+        "label": "参考 3",
+        "category": "手帐博主",
+        "title": "a5空白本｜一支黑笔写萌萌的手帐🐢🍃",
+        "cover": "./assets/cases/6a562edf000000001101490b.webp",
+        "url": "https://www.xiaohongshu.com/explore/6a562edf000000001101490b?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 手帐博主",
+        "takeaway": "仅参考黑笔手帐的书写与版式，不代表 App 功能。"
+      }
+    ]
+  },
+  {
+    "id": "study-handwriting",
+    "title": "Study vlog / 手写摘抄",
+    "group": "学习演示",
+    "icon": "✍️",
+    "audience": "学习日常、手写摘抄类创作者；将记录融入真实学习过程。",
+    "problem": "从待办文字、学习记录、打卡或摘抄中选择一个场景，配合口播讲清操作与使用体验。",
+    "sourceCategory": "Study vlog / 手写摘抄",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 5,
+    "topics": [
+      {
+        "id": "study-log",
+        "title": "To-do list ＋ 学习记录",
+        "structure": [
+          "呈现当天学习目标与 to-do list 的真实场景；前 25 秒内露出并点名排版小动物",
+          "展示用小动物记下学习计划或待办文字",
+          "学习过程中穿插实际记录操作与相关功能介绍",
+          "完成后写下当日学习记录或复盘",
+          "CTA：把今天最想完成的一项学习任务记下来"
+        ]
+      },
+      {
+        "id": "excerpt",
+        "title": "读到喜欢的句子，轻量摘抄",
+        "structure": [
+          "展示读到的一句话或正在摘抄的真实场景；前 25 秒内露出并点名排版小动物",
+          "实机输入文字并写下当时的理解或感受",
+          "选择小动物与模板，展示排版效果",
+          "将完成的记录与手写 / 阅读画面自然衔接",
+          "CTA：从今天最打动你的一句话开始记录"
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "6aa549840000000011035380",
+        "label": "参考 1",
+        "category": "Study vlog / 手写摘抄",
+        "title": "G11国际女高｜日均学习10h➕｜学习浓度百分百",
+        "cover": "./assets/cases/6aa549840000000011035380.webp",
+        "url": "https://www.xiaohongshu.com/explore/6aa549840000000011035380?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · Study vlog / 手写摘抄",
+        "takeaway": "参考真实学习日常中的记录节点。"
+      },
+      {
+        "id": "6aca0b8e0000000018005e5d",
+        "label": "参考 2",
+        "category": "Study vlog / 手写摘抄",
+        "title": "手写声控｜笔触音🍣｜简简单单又一餐～",
+        "cover": "./assets/cases/6aca0b8e0000000018005e5d.webp",
+        "url": "https://www.xiaohongshu.com/explore/6aca0b8e0000000018005e5d?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · Study vlog / 手写摘抄",
+        "takeaway": "仅参考手写声音与画面的呈现，不作为读书口播范例。"
+      }
+    ]
+  },
+  {
+    "id": "life-vlog",
+    "title": "生活化 vlog",
+    "group": "其他场景",
+    "icon": "☕",
+    "audience": "日常生活、独居与独处日记类创作者。",
+    "problem": "围绕一件真实事件展示记录过程，让生活片段与产品操作直接对应。",
+    "sourceCategory": "生活化 vlog",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 6,
+    "topics": [
+      {
+        "id": "daily-life",
+        "title": "独居 / 独处日记，把生活留几句",
+        "structure": [
+          "用独居生活中的一个记录困扰开场，前 25 秒内露出排版小动物",
+          "边口播边演示记录、模板和日记本，明确产品如何解决问题",
+          "结合一条真实生活记录说明操作与体验，避免只拍日常而弱化产品",
+          "CTA：把今天的一件小事记进喜欢的小动物模板"
+        ]
+      }
+    ],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "6ad1eb91000000001a022062",
+        "label": "参考 1",
+        "category": "生活化 vlog",
+        "title": "💬沉浸式上學日記15^ 兩天の放課後日記🎀🪄",
+        "cover": "./assets/cases/6ad1eb91000000001a022062.webp",
+        "url": "https://www.xiaohongshu.com/explore/6ad1eb91000000001a022062?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 生活化 vlog",
+        "takeaway": "参考校园日常里可被记录的具体片段。"
+      },
+      {
+        "id": "6ad20439000000001402c288",
+        "label": "参考 2",
+        "category": "生活化 vlog",
+        "title": "“抱歉，没能留住你”",
+        "cover": "./assets/cases/6ad20439000000001402c288.webp",
+        "url": "https://www.xiaohongshu.com/explore/6ad20439000000001402c288?xsec_source=pc_feed",
+        "source": "核心策略表 · 人群／场景 · 生活化 vlog",
+        "takeaway": "参考生活记忆与告别情绪的表达。"
+      }
+    ]
+  },
+  {
+    "id": "special-scenes",
+    "title": "特殊人群 / 特殊场景",
+    "group": "其他场景",
+    "icon": "💌",
+    "audience": "有明确记录需求的创作者，例如追星日记、恋爱或暗恋日记。",
+    "problem": "从自己想留住的经历出发，展示文字记录、模板和日记回看如何承接这份表达。",
+    "sourceCategory": "特殊人群 / 特殊场景",
+    "sourceColumn": "人群／场景",
+    "sourceRow": 7,
+    "topics": [],
+    "structure": [
+      "从一个真实困扰或具体需求开场",
+      "前 25 秒内露出并点名排版小动物",
+      "重点口播介绍与选题相关的功能，配合实机操作",
+      "结合真实记录分享使用感受，并邀请观众开始记录"
+    ],
+    "cases": [
+      {
+        "id": "680a4428000000001a007a7e",
+        "label": "参考 1",
+        "category": "特殊人群 / 特殊场景",
+        "title": "男高暗恋日记第七期",
+        "cover": "./assets/cases/680a4428000000001a007a7e.webp",
+        "url": "https://www.xiaohongshu.com/explore/680a4428000000001a007a7e?xsec_token=CBPuEUyh0UYkJZZa0Mf7Ptx-QqfeHur2jz32prpKYrTAI=&xsec_source=app_share",
+        "source": "核心策略表 · 人群／场景 · 特殊人群 / 特殊场景",
+        "takeaway": "参考围绕具体情感经历持续记录的表达。"
+      }
+    ]
+  }
+]
