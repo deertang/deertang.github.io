@@ -850,3 +850,49 @@ img { max-width: 100%; display: block; }
   .direction-features { margin-top: 8px; }
   .idea-hook blockquote { font-size: 15px; }
 }
+
+/* ===== 三类植入需求卡片 ===== */
+.req-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 4px 0 26px; }
+.req-col { display: flex; flex-direction: column; min-width: 0; }
+.req-tag { align-self: flex-start; margin-bottom: 10px; padding: 4px 12px; border-radius: 999px; background: var(--forest-deep); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: .04em; }
+.req-card { flex: 1; display: flex; flex-direction: column; aspect-ratio: 1 / 1.08; padding: 22px 22px 18px; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.req-card h3 { color: var(--forest-deep); font-size: 16px; line-height: 1.6; margin-bottom: 12px; }
+.req-card--oral { background: linear-gradient(160deg, #e8f5ff, #fffbea); }
+.req-card--soft { background: linear-gradient(160deg, #f1fbf4, #ffffff); }
+.req-card--note { background: linear-gradient(160deg, #fff6ec, #ffffff); }
+.req-flow { list-style: none; counter-reset: f; display: flex; flex-direction: column; gap: 7px; }
+.req-flow li { counter-increment: f; position: relative; padding: 6px 10px 6px 34px; border-radius: 9px; background: rgba(255,255,255,.75); color: var(--ink); font-size: 13px; }
+.req-flow li::before { content: counter(f); position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; border-radius: 50%; background: var(--forest); color: #fff; font-size: 11px; line-height: 18px; text-align: center; font-weight: 700; }
+.req-ratio { margin-top: 12px; color: var(--forest); font-size: 12.5px; font-weight: 700; }
+.req-bonus { margin-top: auto; padding: 10px 12px; border-radius: 10px; background: #e53935; color: #fff; font-size: 13.5px; font-weight: 700; text-align: center; box-shadow: 0 6px 16px rgba(229,57,53,.28); }
+.req-ratio + .req-bonus { margin-top: 14px; }
+.req-list { padding-left: 20px; display: flex; flex-direction: column; gap: 9px; color: var(--ink); font-size: 13px; line-height: 1.75; }
+.req-list b { color: var(--forest-deep); }
+.req-card--note .req-list { font-size: 12.5px; gap: 7px; }
+@media (max-width: 960px) { .req-card { aspect-ratio: auto; } }
+@media (max-width: 760px) { .req-grid { grid-template-columns: 1fr; } }
+
+/* ===== 发布提醒 ===== */
+.publish-reminder { max-width: 640px; margin: 0 auto 18px; padding: 14px 20px; border: 1.5px dashed #f0a7a3; border-radius: 14px; background: #fff6f5; }
+.publish-reminder-title { color: #c62828; font-size: 13.5px; font-weight: 700; margin-bottom: 6px; }
+.publish-reminder ol { padding-left: 20px; color: var(--ink); font-size: 13px; line-height: 1.9; }
+.publish-reminder b { color: #c62828; }
+
+/* ===== 流量扶持横向长卡 ===== */
+.coop-grid--single { grid-template-columns: 1fr; }
+.coop-grid--single .coop-support { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); grid-template-areas: "title title" "metrics platform" "metrics note"; column-gap: 32px; align-items: start; }
+.coop-grid--single .coop-support > h3 { grid-area: title; }
+.coop-grid--single .support-metrics { grid-area: metrics; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 6px 0 0; }
+.coop-grid--single .support-metrics > div { grid-template-columns: 1fr; gap: 6px; padding: 18px; border-radius: 14px; background: #f6fbff; border: 1px solid var(--line); }
+.coop-grid--single .coop-platform { grid-area: platform; margin-top: 6px; }
+.coop-grid--single .support-note { grid-area: note; margin-top: 12px; }
+.req-section-title { margin: 30px 0 14px; color: var(--forest-deep); font-size: 20px; }
+#coop .publish-reminder { margin-bottom: 26px; }
+@media (max-width: 860px) {
+  .coop-grid--single .coop-support { grid-template-columns: 1fr; grid-template-areas: "title" "metrics" "platform" "note"; }
+}
+@media (max-width: 560px) { .coop-grid--single .support-metrics { grid-template-columns: 1fr; } }
+.req-flow li { line-height: 1.6; }
+.req-flow li b { color: var(--forest-deep); }
+.req-flow li::before { top: 8px; transform: none; }
+.req-card--note .req-flow li { font-size: 12.5px; }

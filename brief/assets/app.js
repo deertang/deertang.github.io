@@ -7,7 +7,7 @@
   "use strict";
 
   var DATA_URL = "./assets/inspirations.json";
-  var KNOWN_GROUPS = ["硬广口播", "手帐演示", "学习演示", "其他场景"];
+  var KNOWN_GROUPS = ["硬广口播", "手帐演示", "学习演示", "其他场景", "图文种草"];
 
   var grid = document.getElementById("idea-grid");
   var statusEl = document.getElementById("tab-status");
@@ -50,7 +50,7 @@
     head.appendChild(emoji);
     head.appendChild(el("h3", "idea-title", isEmpty(item.title) ? "（未命名选题）" : item.title));
     head.appendChild(el("span", "idea-group-tag", isEmpty(item.group) ? "灵感" : item.group));
-    var mascotByGroup = {"硬广口播":"tsuki", "手帐演示":"ralph", "学习演示":"kaka", "其他场景":"liangliang"};
+    var mascotByGroup = {"硬广口播":"tsuki", "手帐演示":"ralph", "学习演示":"kaka", "其他场景":"liangliang", "图文种草":"miles"};
     var mascot = el("img", "idea-mascot");
     mascot.src = "./assets/ip-" + (mascotByGroup[item.group] || "tsuki") + ".webp";
     mascot.alt = "";
@@ -83,7 +83,7 @@
       isEmpty(item.problem) ? "待补充" : item.problem));
 
     /* 案例以核心策略表「人群／场景」的整行为单位，保持原顺序。 */
-    card.appendChild(buildCases(item.cases, item.sourceCategory + " · 参考案例"));
+    card.appendChild(buildCases(item.cases, item.sourceCategory + " · 参考案例", item.format));
 
     /* 各类重点口播方向独立展开，并保留对应案例。 */
     var topics = Array.isArray(item.topics) ? item.topics : [];
@@ -121,7 +121,7 @@
       topicGroup.appendChild(topicBody);
       card.appendChild(topicGroup);
     } else if (!featuredTopics.length) {
-      card.appendChild(buildScript(item, "查看拍摄提纲"));
+      card.appendChild(buildScript(item, item.format === "图文" ? "查看图文结构" : "查看拍摄提纲"));
     }
 
     /* 可选备注 */
@@ -144,14 +144,15 @@
     return card;
   }
 
-  function buildCases(caseList, label) {
+  function buildCases(caseList, label, format) {
+    var unit = format === "图文" ? "笔记" : "视频";
     var caseField = el("div", "idea-field");
     caseField.appendChild(el("p", "idea-label", label));
     var cases = Array.isArray(caseList) ? caseList.filter(function (c) {
       return c && !isEmpty(c.title) && !isEmpty(c.url);
     }) : [];
     if (cases.length) {
-    var hint = "参考视频 " + cases.length + " 条 · 横向滑动浏览";
+    var hint = "参考" + unit + " " + cases.length + " 条 · 横向滑动浏览";
       caseField.appendChild(el("p", "case-scroll-hint", hint));
       var wrap = el("div", "idea-cases");
       wrap.setAttribute("role", "group");
@@ -163,13 +164,13 @@
           tile.href = href;
           tile.target = "_blank";
           tile.rel = "noopener noreferrer";
-          tile.setAttribute("aria-label", "参考视频第 " + (caseIndex + 1) + " 条：" + (c.category || "安利视频") + "《" + (c.title || "查看笔记") + "》");
+          tile.setAttribute("aria-label", "参考" + unit + "第 " + (caseIndex + 1) + " 条：" + (c.category || "安利视频") + "《" + (c.title || "查看笔记") + "》");
         }
         if (!isEmpty(c.cover)) {
           var imageWrap = el("div", "idea-case-cover-wrap");
           var cover = el("img", "idea-case-cover");
           cover.src = c.cover;
-          cover.alt = "视频封面：" + (c.title || "推荐案例");
+          cover.alt = unit + "封面：" + (c.title || "推荐案例");
           cover.loading = "lazy";
           imageWrap.appendChild(cover);
           imageWrap.appendChild(el("span", "idea-case-badge", "参考 " + (caseIndex + 1)));
@@ -224,7 +225,10 @@
     var lines = [];
     lines.push("【" + (item.title || "未命名选题") + "】" + (item.group ? " · " + item.group : ""));
     if (!isEmpty(item.angle)) lines.push("口播切入：" + item.angle);
-    lines.push("合作要求：视频硬广；前 25 秒内露出产品；70% 产品介绍、30% 真实场景。");
+    lines.push(item.format === "图文"
+      ? "合作要求：图文植入；植入图片在一半之前出现；至少 2 张操作方法 + 2 张排版效果；花字展示便利性与美观。"
+      : "合作要求：硬广口播前 25 秒内露出产品、70% 产品介绍 / 30% 真实场景；软广视频前 25s 露出、植入不少于时长 40%。");
+    lines.push("发布提醒：带 #排版小动物 话题；发布后发置顶评论引导下载。");
     lines.push("案例分类：核心策略表 · 人群／场景 · " + item.sourceCategory);
     if (!isEmpty(item.hook)) lines.push("开场示例：" + item.hook);
     if (Array.isArray(item.keywords) && item.keywords.length) lines.push("选题关键词：" + item.keywords.join(" / "));

@@ -861,5 +861,97 @@
         "takeaway": "参考围绕具体情感经历持续记录的表达。"
       }
     ]
+  },
+  {
+    "id": "image-note",
+    "title": "图文种草",
+    "group": "图文种草",
+    "icon": "🖼️",
+    "format": "图文",
+    "audience": "朋友圈 / plog 排版博主、手帐与拼贴爱好者、宿舍与房间氛围感博主、小众 App 合集安利博主；喜欢随手记录日常、在意分享画面好不好看的年轻女生。",
+    "problem": "当下的心绪和小事来不及写进纸质手帐，转眼就忘；想发朋友圈 / plog 又嫌排版麻烦。用小动物模板随手记一句，一键生成不同风格的好看卡片，可直接分享、做拼贴素材或补手帐；配合每日打卡，让记录变成有成就感的小习惯。",
+    "sourceCategory": "图文种草",
+    "sourceColumn": "人群／场景",
+    "topics": [],
+    "structure": [
+      "封面 / 首图：成品排版卡片或拼贴效果，标题点出场景（朋友圈手账本、碎碎念、P人软件等）",
+      "植入图片在一半之前出现（如 6 张图，植入不晚于第 3 张）",
+      "至少 2 张【操作方法】：输入文字 → 选择小动物模板 → 添加照片 / 装饰",
+      "至少 2 张【排版效果】：成品卡片、拼贴或日记本回看，花字标注【方便实用】【好看】",
+      "正文用口语 & 网感化表达真实使用感受，带 #排版小动物 话题"
+    ],
+    "visual": "成品图与 App 界面截图搭配，用花字突出“随手记 / 一键排版 / 小动物好可爱”等卖点；生活照片做背景，让产品融进真实日常。",
+    "cases": [
+      {
+        "id": "6aa3e27c00000000290171eb",
+        "label": "参考 1",
+        "category": "图文案例",
+        "title": "幸福是一本卷边的日记本📔",
+        "cover": "./assets/cases/6aa3e27c00000000290171eb.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6aa3e27c00000000290171eb?xsec_token=CBe-tjolRZbpImGl73KlNue_e3WmZXfGDOMeg3OZGVHXU=&xsec_source=app_share",
+        "takeaway": "参考把小动物记录做成“电子手帐本”式 plog，配朋友圈文案。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6aa3d0bf00000000110334ab",
+        "label": "参考 2",
+        "category": "图文案例",
+        "title": "📒把朋友圈变成手账本 :)",
+        "cover": "./assets/cases/6aa3d0bf00000000110334ab.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6aa3d0bf00000000110334ab?xsec_token=CBZycwj33Ul08lVVCrRy54v2DLCHE965QH5jicRNOAOac=&xsec_source=app_share",
+        "takeaway": "参考“一天出行 plog + App 内截图”，讲清随手记录与拼贴素材库的用途。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6aa3cf6a00000000280381d6",
+        "label": "参考 3",
+        "category": "图文案例",
+        "title": "用拼贴照片记录生活✂️",
+        "cover": "./assets/cases/6aa3cf6a00000000280381d6.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6aa3cf6a00000000280381d6?xsec_token=CB0UTBmy-ndkAPt-sieaLj_4ZzJDjP740ZMMZf9BUtSSk=&xsec_source=app_share",
+        "takeaway": "参考从“心绪来不及写进纸质手帐”切入，展示多风格生成与拼贴效果。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6aa63adf00000000110393f0",
+        "label": "参考 4",
+        "category": "图文案例",
+        "title": "期待 生命中许多未发生的幸福",
+        "cover": "./assets/cases/6aa63adf00000000110393f0.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6aa63adf00000000110393f0?xsec_token=CB-79a9j285JrocaiEqAJJ7fHt44qK7LZ2bzPy_96pBwk=&xsec_source=app_share",
+        "takeaway": "参考碎碎念合集与“翻阅很幸福”的情绪表达。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6acf1845000000001801416f",
+        "label": "参考 5",
+        "category": "图文案例",
+        "title": "P人天菜｜有趣又松弛感的高颜值小众软件✨",
+        "cover": "./assets/cases/6acf1845000000001801416f.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6acf1845000000001801416f?xsec_token=CBDZ24AKq1aaIGF7AjoTgqW99qslLi1IAz7_s2qmCq1H0=&xsec_source=app_share",
+        "takeaway": "参考合集类 App 安利：一句话卖点“可爱模板，一键搞定图文排版”。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6ad0b5da000000001a0324ee",
+        "label": "参考 6",
+        "category": "图文案例",
+        "title": "：）",
+        "cover": "./assets/cases/6ad0b5da000000001a0324ee.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6ad0b5da000000001a0324ee?xsec_token=CBpxKAeVjpkAhg319Q9N9pri6m9CEC3BC2hNOq5QusluQ=&xsec_source=app_share",
+        "takeaway": "参考“白天电子记录、晚上补实体手帐”的桌面场景植入。",
+        "source": "图文种草 · 参考案例"
+      },
+      {
+        "id": "6ae06e5c000000003501a0ef",
+        "label": "参考 7",
+        "category": "图文案例",
+        "title": "照片加了什么，好幸福…",
+        "cover": "./assets/cases/6ae06e5c000000003501a0ef.jpg",
+        "url": "https://www.xiaohongshu.com/explore/6ae06e5c000000003501a0ef?xsec_token=CB74ag_E4TLs8zl6IhMC_I-5ADZuN2bUcVmMvZjh5RgFM=&xsec_source=app_share",
+        "takeaway": "参考氛围感小窝场景，带出便签主题与打卡功能的成就感。",
+        "source": "图文种草 · 参考案例"
+      }
+    ]
   }
 ]
